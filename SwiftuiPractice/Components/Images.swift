@@ -14,7 +14,7 @@ struct Images: View {
             Image("img")
                 .resizable(capInsets: EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 .aspectRatio(contentMode: .fit)
-//                .rotationEffect(.degrees(180))
+                .rotationEffect(.degrees(180))
                 .frame(width: 300, height: 200)
                 .border(.red, width: 2)
             

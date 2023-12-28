@@ -1,0 +1,6 @@
+framework module Pods_SwiftuiPractice {
+  umbrella header "Pods-SwiftuiPractice-umbrella.h"
+
+  export *
+  module * { export * }
+}
