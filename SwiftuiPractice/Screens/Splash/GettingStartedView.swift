@@ -28,21 +28,7 @@ struct GettingStartedView: View {
             Spacer()
             
             // Get Started Button
-            ZStack {
-                RoundedRectangle(cornerSize: CGSize(width: 5, height: 5))
-                    .padding(.horizontal, 20)
-                    .frame(height: 50)
-                    .cornerRadius(10)
-                    .foregroundColor(Color(uiColor: .init(hexString: "#426A5A")))
-                
-                Button("Get Started") {
-                    
-                }
-                .font(.custom("Poppins-Medium", size: 16))
-                .frame(width: 200, height: 50)
-                .cornerRadius(20)
-                .foregroundColor(.white)
-            }
+            PrimaryButtonView(title: "Getting Started")
             
             // Optional SignIn
             HStack {

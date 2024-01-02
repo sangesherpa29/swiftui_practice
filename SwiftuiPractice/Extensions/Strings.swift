@@ -17,4 +17,24 @@ extension String {
         static var alreadyHaveAccount = "Already have an account?";
         static var login = "Login";
     }
+    
+    struct Register{
+        static var gettingStarted = "Getting Started"
+        static var emailAdress =  "Email Address"
+        static var pasword = "Password"
+        static var confirmPasword = "Confirm Password"
+        static var continue_ = "Continue"
+        static var termsCaption = "By creating an account, you agree to our Terms and Conditions."
+        static var alreadyHaveAccount = "Already have an account?";
+        static var login = "Login"
+        static var termsLink = "https://www.airbarknbark.com.au/air-barknbark-terms-of-service/"
+        static var privacyPolicyLink = "https://www.airbarknbark.com.au/privacy-statement/"
+        
+        static var invalidEmail = "Invalid email, Please enter a valid email."
+        static var invalidPassword = "Invalid password, Please enter a valid password."
+        static var passwordsNotMatched = "Passwords not matched."
+        static var termsConditionsNotAccepted = "Terms and conditions must be accepted before proceding."
+        static var authenticationText = "A 6-digit authentication code has been sent to your registered email."
+        
+    }
 }

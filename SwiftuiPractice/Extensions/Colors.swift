@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import UIKit
 
 extension UIColor {
@@ -27,4 +28,8 @@ extension UIColor {
         }
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
+}
+
+extension Color {
+    static var primaryColor = Color(uiColor: .init(hexString: "#426A5A"))
 }
