@@ -24,7 +24,7 @@ extension String {
         static var pasword = "Password"
         static var confirmPasword = "Confirm Password"
         static var continue_ = "Continue"
-        static var termsCaption = "By creating an account, you agree to our Terms and Conditions."
+        static var termsCaption = "By creating an account, you agree to our "
         static var alreadyHaveAccount = "Already have an account?";
         static var login = "Login"
         static var termsLink = "https://www.airbarknbark.com.au/air-barknbark-terms-of-service/"

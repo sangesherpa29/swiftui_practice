@@ -33,14 +33,14 @@ struct OtpVerificationView: View {
             .padding(20)
             
             
-            // Code Stack
-            HStack {
-                OutlinedTextfield("")
-                OutlinedTextfield("")
-                OutlinedTextfield("")
-                OutlinedTextfield("")
-                OutlinedTextfield("")
-                OutlinedTextfield("")
+            // Otp Code Stack
+            HStack(spacing: 12) {
+                OutlinedTextField(text: "", alignment: .center)
+                OutlinedTextField(text: "", alignment: .center)
+                OutlinedTextField(text: "", alignment: .center)
+                OutlinedTextField(text: "", alignment: .center)
+                OutlinedTextField(text: "", alignment: .center)
+                OutlinedTextField(text: "", alignment: .center)
             }
             .frame(height: 50)
             .padding(.horizontal, 20)
@@ -54,6 +54,7 @@ struct OtpVerificationView: View {
             HStack {
                 Text("Code sent. Resend code in")
                     .font(.custom("Poppins-Light", size: 14))
+                    .foregroundColor(.secondary)
                 
                 Button("Timer") {
                     // Perform some action on Submit

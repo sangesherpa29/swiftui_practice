@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SignupView: View {
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
         VStack {
 //            Spacer()
@@ -15,48 +17,65 @@ struct SignupView: View {
                 .resizable()
                 .frame(width: 190, height: 100)
                 .offset(CGSize(width: 0, height: 40.0))
+                .padding(.bottom, 50)
             
             
             // Getting Started
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 10) {
                 Image("arrow")
                     .resizable()
                     .frame(width: 50, height: 30)
-                    .offset(CGSize(width: -11.0, height: 6.0))
+                    .offset(CGSize(width: -11.0, height: 0.0))
+                    .onTapGesture {
+                        dismiss()
+                    }
 
-                Text("Getting Started")
+                Text("Get Started")
                     .font(.custom("Poppins-Bold", size: 23))
             }
-            .frame(width: UIScreen.main.bounds.width - 40, alignment: .leading)
+            .frame(width: UIScreen.main.bounds.width - 40, height: 50, alignment: .leading)
             .padding(20)
-            .offset(CGSize(width: 0, height: 40.0))
+            .padding(.bottom, 0)
             
             
-            // Form Stack
             VStack(alignment: .leading, spacing: 10) {
-                OutlinedTextfield("Email")
-                OutlinedTextfield("Password")
-                OutlinedTextfield("Confirm Password")
+                OutlinedTextField(text: "Email", alignment: .leading)
+                OutlinedTextField(text: "Password", alignment: .leading)
+                OutlinedTextField(text: "Confirm password", alignment: .leading)
             }
-            .frame(width: UIScreen.main.bounds.width - 40, height: 170)
+            .frame(width: UIScreen.main.bounds.width - 40)
             .padding(.horizontal, 20)
-            .padding(.vertical, 25)
-            .offset(CGSize(width: 0, height: 20.0))
+            .padding(.vertical, 15)
             
             
             HStack(alignment: .top) {
                 Image("checkbox")
-                    .offset(CGSize(width: 0.0, height: 4.0))
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                    .offset(CGSize(width: 4.0, height: 4.0))
                 
-                Text(String.Register.termsCaption)
-                    .font(.custom("Poppins-Light", size: 14))
+                VStack(alignment: .leading) {
+                    Text(String.Register.termsCaption)
+                        .font(.custom("Poppins-Light", size: 14))
+                        .offset(CGSize(width: 4.0, height: 0.0))
+                    
+                    Button("Terms and Conditions") {}
+                        .foregroundColor(.primaryColor)
+                        .font(.custom("Poppins-Medium", size: 14))
+                        .offset(CGSize(width: 4.0, height: 0.0))
+                }
+                Spacer()
             }
+            .frame(width: UIScreen.main.bounds.width - 40)
             .padding(.horizontal)
-            .padding(.vertical, 10)
             
+//            NavigationButton {
+//                PrimaryButtonView(title: "Continue")
+//            } destination: {
+//                OtpVerificationView()
+//            }
+//            .padding(.top, 10)
             
-            PrimaryButtonView(title: "Continue")
-                .offset(CGSize(width: 0, height: 10.0))
             
             HStack {
                 Text("Already have an account? ")
@@ -68,12 +87,12 @@ struct SignupView: View {
                 .font(.custom("Poppins-SemiBold", size: 14))
                 .foregroundColor(Color(uiColor: .init(hexString: "#426A5A")))
             }
-            .padding(.vertical, 5)
-            .offset(CGSize(width: 0, height: 10.0))
+            .padding(.top, 10)
             
             Spacer()
-            
         }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden()
     }
 }
 

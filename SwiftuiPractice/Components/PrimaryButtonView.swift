@@ -18,8 +18,7 @@ struct PrimaryButtonView: View {
                 .cornerRadius(10)
                 .foregroundColor(Color(uiColor: .init(hexString: "#426A5A")))
             
-            Button(title) {
-                
+            NavigationLink(title) {
             }
             .font(.custom("Poppins-Medium", size: 16))
             .frame(width: 200, height: 50)
