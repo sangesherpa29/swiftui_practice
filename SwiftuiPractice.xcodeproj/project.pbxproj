@@ -12,6 +12,12 @@
 		3307627F2B45308000F1CB1A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3307627E2B45308000F1CB1A /* View.swift */; };
 		330762832B45331800F1CB1A /* OutlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330762822B45331800F1CB1A /* OutlinedTextField.swift */; };
 		330762852B453C2800F1CB1A /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330762842B453C2800F1CB1A /* NavigationButton.swift */; };
+		330762882B455B9500F1CB1A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330762872B455B9500F1CB1A /* LoginView.swift */; };
+		3307628A2B455CC600F1CB1A /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330762892B455CC600F1CB1A /* ResetPasswordView.swift */; };
+		3307628E2B45603D00F1CB1A /* TopStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3307628D2B45603D00F1CB1A /* TopStackView.swift */; };
+		330762912B4561A900F1CB1A /* ChatTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330762902B4561A900F1CB1A /* ChatTabView.swift */; };
+		330762932B4561D000F1CB1A /* TextComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330762922B4561D000F1CB1A /* TextComponents.swift */; };
+		330762952B45640200F1CB1A /* ToggleSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330762942B45640200F1CB1A /* ToggleSwitchView.swift */; };
 		33780E912B43C53E00F8D8D3 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33780E902B43C53E00F8D8D3 /* SplashScreen.swift */; };
 		33780EBA2B43DABB00F8D8D3 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33780EB42B43DABB00F8D8D3 /* Poppins-SemiBold.ttf */; };
 		33780EBB2B43DABB00F8D8D3 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33780EB52B43DABB00F8D8D3 /* Poppins-Italic.ttf */; };
@@ -59,6 +65,12 @@
 		3307627E2B45308000F1CB1A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		330762822B45331800F1CB1A /* OutlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedTextField.swift; sourceTree = "<group>"; };
 		330762842B453C2800F1CB1A /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+		330762872B455B9500F1CB1A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		330762892B455CC600F1CB1A /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		3307628D2B45603D00F1CB1A /* TopStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStackView.swift; sourceTree = "<group>"; };
+		330762902B4561A900F1CB1A /* ChatTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTabView.swift; sourceTree = "<group>"; };
+		330762922B4561D000F1CB1A /* TextComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextComponents.swift; sourceTree = "<group>"; };
+		330762942B45640200F1CB1A /* ToggleSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleSwitchView.swift; sourceTree = "<group>"; };
 		33780E902B43C53E00F8D8D3 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		33780EA92B43CDCA00F8D8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		33780EB42B43DABB00F8D8D3 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -122,11 +134,46 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		33780E8F2B43C52700F8D8D3 /* Screens */ = {
+		330762862B455B8000F1CB1A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				330762872B455B9500F1CB1A /* LoginView.swift */,
+				330762892B455CC600F1CB1A /* ResetPasswordView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3307628B2B455E2B00F1CB1A /* Auth */ = {
 			isa = PBXGroup;
 			children = (
 				33780ECA2B440D0F00F8D8D3 /* Signup */,
+				330762862B455B8000F1CB1A /* Login */,
 				33780EC92B440D0500F8D8D3 /* Splash */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		3307628C2B455E3700F1CB1A /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				3307628F2B45619D00F1CB1A /* ChatTabs */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		3307628F2B45619D00F1CB1A /* ChatTabs */ = {
+			isa = PBXGroup;
+			children = (
+				330762902B4561A900F1CB1A /* ChatTabView.swift */,
+			);
+			path = ChatTabs;
+			sourceTree = "<group>";
+		};
+		33780E8F2B43C52700F8D8D3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				3307628B2B455E2B00F1CB1A /* Auth */,
+				3307628C2B455E3700F1CB1A /* Tabs */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -169,7 +216,6 @@
 			children = (
 				33780ECB2B440D2500F8D8D3 /* SignupView.swift */,
 				33780ECF2B4417EC00F8D8D3 /* OtpVerificationView.swift */,
-				3307627A2B45167300F1CB1A /* Launch Screen.storyboard */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -179,6 +225,9 @@
 			children = (
 				33780ECD2B440EC300F8D8D3 /* PrimaryButtonView.swift */,
 				330762822B45331800F1CB1A /* OutlinedTextField.swift */,
+				3307628D2B45603D00F1CB1A /* TopStackView.swift */,
+				330762922B4561D000F1CB1A /* TextComponents.swift */,
+				330762942B45640200F1CB1A /* ToggleSwitchView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -209,12 +258,13 @@
 		33D018152B3A728200914A67 /* SwiftuiPractice */ = {
 			isa = PBXGroup;
 			children = (
+				33D018162B3A728200914A67 /* SwiftuiPracticeApp.swift */,
+				33D018182B3A728200914A67 /* ContentView.swift */,
+				3307627A2B45167300F1CB1A /* Launch Screen.storyboard */,
 				33780EC02B43DD2800F8D8D3 /* Extensions */,
 				33780EA92B43CDCA00F8D8D3 /* Info.plist */,
 				33780E962B43CBDE00F8D8D3 /* Fonts */,
 				33780E8F2B43C52700F8D8D3 /* Screens */,
-				33D018162B3A728200914A67 /* SwiftuiPracticeApp.swift */,
-				33D018182B3A728200914A67 /* ContentView.swift */,
 				339426472B3D7A95003A3295 /* Components */,
 				33D0181A2B3A728200914A67 /* Assets.xcassets */,
 				33D0181C2B3A728200914A67 /* Preview Content */,
@@ -437,16 +487,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				33780ED02B4417EC00F8D8D3 /* OtpVerificationView.swift in Sources */,
+				3307628E2B45603D00F1CB1A /* TopStackView.swift in Sources */,
 				33780E912B43C53E00F8D8D3 /* SplashScreen.swift in Sources */,
 				33780ECE2B440EC300F8D8D3 /* PrimaryButtonView.swift in Sources */,
 				330762832B45331800F1CB1A /* OutlinedTextField.swift in Sources */,
 				33780EC62B43FA8E00F8D8D3 /* GettingStartedView.swift in Sources */,
 				33780EC42B43F56300F8D8D3 /* Colors.swift in Sources */,
 				33780ECC2B440D2500F8D8D3 /* SignupView.swift in Sources */,
+				330762932B4561D000F1CB1A /* TextComponents.swift in Sources */,
+				330762912B4561A900F1CB1A /* ChatTabView.swift in Sources */,
 				33D018192B3A728200914A67 /* ContentView.swift in Sources */,
+				330762882B455B9500F1CB1A /* LoginView.swift in Sources */,
 				3307627F2B45308000F1CB1A /* View.swift in Sources */,
 				33780EC22B43DD3B00F8D8D3 /* Strings.swift in Sources */,
 				3307627D2B451A6D00F1CB1A /* Dimension.swift in Sources */,
+				3307628A2B455CC600F1CB1A /* ResetPasswordView.swift in Sources */,
+				330762952B45640200F1CB1A /* ToggleSwitchView.swift in Sources */,
 				33D018172B3A728200914A67 /* SwiftuiPracticeApp.swift in Sources */,
 				330762852B453C2800F1CB1A /* NavigationButton.swift in Sources */,
 			);

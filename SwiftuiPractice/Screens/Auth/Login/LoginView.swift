@@ -1,18 +1,17 @@
 //
-//  SignupView.swift
+//  LoginView.swift
 //  SwiftuiPractice
 //
-//  Created by Web and App on 02/01/2024.
+//  Created by Web and App on 03/01/2024.
 //
 
 import SwiftUI
 
-struct SignupView: View {
+struct LoginView: View {
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         VStack {
-//            Spacer()
             Image("logo")
                 .resizable()
                 .frame(width: 190, height: 100)
@@ -30,64 +29,49 @@ struct SignupView: View {
                         dismiss()
                     }
 
-                Text("Get Started")
+                Text("Welcome Back!")
                     .font(.custom("Poppins-Bold", size: 23))
             }
             .frame(width: UIScreen.main.bounds.width - 40, height: 50, alignment: .leading)
             .padding(20)
-            .padding(.bottom, 0)
             
             
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .leading, spacing: 14) {
                 OutlinedTextField(text: "Email", alignment: .leading)
                 OutlinedTextField(text: "Password", alignment: .leading)
-                OutlinedTextField(text: "Confirm password", alignment: .leading)
             }
             .frame(width: UIScreen.main.bounds.width - 40)
             .padding(.horizontal, 20)
             .padding(.vertical, 15)
             
             
-            HStack(alignment: .top) {
-                Image("checkbox")
-                    .resizable()
-                    .frame(width: 20, height: 20)
-                    .offset(CGSize(width: 4.0, height: 4.0))
-                
-                VStack(alignment: .leading) {
-                    Text(String.Register.termsCaption)
-                        .font(.custom("Poppins-Light", size: 14))
-                        .offset(CGSize(width: 4.0, height: 0.0))
-                    
-                    Button("Terms and Conditions") {}
-                        .foregroundColor(.primaryColor)
-                        .font(.custom("Poppins-Medium", size: 14))
-                        .offset(CGSize(width: 4.0, height: 0.0))
-                }
+            HStack(alignment: .top, spacing: 10) {
                 Spacer()
+                
+                Text(String.Login.forgotPassword)
+                    .font(.custom("Poppins-Medium", size: 14))
             }
             .frame(width: UIScreen.main.bounds.width - 40)
-            .padding(.horizontal)
+            .padding(.top, 4)
+            .padding(.bottom, 10)
             
-            NavigationButton {
-                PrimaryButtonView(title: "Continue")
-            } destination: {
-                OtpVerificationView()
+            PrimaryButtonView(title: "Login") {
+                SignupView()
             }
-            .padding(.top, 10)
             
             
-            HStack {
-                Text("Already have an account? ")
+            HStack(spacing: 5) {
+                Text("Don't have an account? ")
                     .font(.custom("Poppins-Regular", size: 14))
                 
-                Button("Log in") {
-                    
+                NavigationLink("Register") {
+                    OtpVerificationView()
+                    OtpVerificationView()
                 }
                 .font(.custom("Poppins-SemiBold", size: 14))
                 .foregroundColor(Color(uiColor: .init(hexString: "#426A5A")))
             }
-            .padding(.top, 10)
+            .padding(.top, 5)
             
             Spacer()
         }
@@ -97,5 +81,5 @@ struct SignupView: View {
 }
 
 #Preview {
-    SignupView()
+    LoginView()
 }

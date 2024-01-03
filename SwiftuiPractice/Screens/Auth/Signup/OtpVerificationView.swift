@@ -8,19 +8,24 @@
 import SwiftUI
 
 struct OtpVerificationView: View {
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
         VStack {
             Image("logo")
                 .resizable()
                 .frame(width: 190, height: 100)
             
-            
-            // Getting Started
+            // Otp verification
             VStack(alignment: .leading, spacing: 12) {
                 Image("arrow")
                     .resizable()
                     .frame(width: 50, height: 30)
                     .offset(CGSize(width: -11.0, height: 6.0))
+                    .onTapGesture {
+                        dismiss()
+                    }
+                    .padding(.bottom, 5)
                 
                 Text("OTP Verification")
                     .font(.custom("Poppins-Bold", size: 23))
@@ -35,19 +40,21 @@ struct OtpVerificationView: View {
             
             // Otp Code Stack
             HStack(spacing: 12) {
-                OutlinedTextField(text: "", alignment: .center)
-                OutlinedTextField(text: "", alignment: .center)
-                OutlinedTextField(text: "", alignment: .center)
-                OutlinedTextField(text: "", alignment: .center)
-                OutlinedTextField(text: "", alignment: .center)
-                OutlinedTextField(text: "", alignment: .center)
+                OutlinedTextField(text: "", alignment: .center, padding: 15)
+                OutlinedTextField(text: "", alignment: .center, padding: 15)
+                OutlinedTextField(text: "", alignment: .center, padding: 15)
+                OutlinedTextField(text: "", alignment: .center, padding: 15)
+                OutlinedTextField(text: "", alignment: .center, padding: 15)
+                OutlinedTextField(text: "", alignment: .center, padding: 15)
             }
             .frame(height: 50)
             .padding(.horizontal, 20)
             
             
-            PrimaryButtonView(title: "Submit")
-                .padding(.vertical)
+            PrimaryButtonView(title: "Submit") {
+                SignupView()
+            }
+            .padding(.vertical)
             
             
             // Bottom Text
@@ -57,7 +64,7 @@ struct OtpVerificationView: View {
                     .foregroundColor(.secondary)
                 
                 Button("Timer") {
-                    // Perform some action on Submit
+                    // Perform some action on submit
                 }
                 .font(.custom("Poppins-Medium", size: 14))
                 .foregroundColor(Color.primaryColor)

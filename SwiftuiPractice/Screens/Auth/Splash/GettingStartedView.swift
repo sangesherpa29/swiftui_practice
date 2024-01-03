@@ -28,11 +28,7 @@ struct GettingStartedView: View {
                 
                 Spacer()
                 
-                
-                // Get Started Button
-                NavigationButton {
-                    PrimaryButtonView(title: "Getting Started")
-                } destination: {
+                PrimaryButtonView(title: "Get Started") {
                     SignupView()
                 }
                 .offset(CGSize(width: 0.0, height: -8.0))
@@ -40,11 +36,11 @@ struct GettingStartedView: View {
                 
                 // Optional SignIn
                 HStack(spacing: 5) {
-                    Text("Already have an account? ")
+                    Text("Already have an account ?")
                         .font(.custom("Poppins-Regular", size: 14))
                     
                     NavigationLink("Log In") {
-//                        SignupView()
+                        SignupView()
                     }
                     .font(.custom("Poppins-SemiBold", size: 14))
                     .foregroundColor(Color(uiColor: .init(hexString: "#426A5A")))

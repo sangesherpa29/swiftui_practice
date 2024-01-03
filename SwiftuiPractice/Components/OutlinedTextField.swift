@@ -10,13 +10,15 @@ import SwiftUI
 struct OutlinedTextField: View {
     @State var text: String
     @State var alignment: TextAlignment
+    @State var padding: CGFloat = 14
     
     var body: some View {
         TextField("", text: $text)
             .font(.custom("Poppins-Regular", size: 14))
             .foregroundColor(.black).opacity(0.5)
-            .padding(10)
-            .border(Color.black, width: 0.2)
+            .padding(padding)
+            .overlay(RoundedRectangle(cornerRadius: 4).stroke(.black, lineWidth: 0.2))
+//            .border(Color.black, width: 0.2)
             .multilineTextAlignment(alignment)
     }
 }

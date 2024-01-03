@@ -35,6 +35,9 @@ extension String {
         static var passwordsNotMatched = "Passwords not matched."
         static var termsConditionsNotAccepted = "Terms and conditions must be accepted before proceding."
         static var authenticationText = "A 6-digit authentication code has been sent to your registered email."
-        
+    }
+    
+    struct Login{
+        static var forgotPassword = "Forgot Password ?"
     }
 }
