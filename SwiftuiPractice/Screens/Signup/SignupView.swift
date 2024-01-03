@@ -69,12 +69,12 @@ struct SignupView: View {
             .frame(width: UIScreen.main.bounds.width - 40)
             .padding(.horizontal)
             
-//            NavigationButton {
-//                PrimaryButtonView(title: "Continue")
-//            } destination: {
-//                OtpVerificationView()
-//            }
-//            .padding(.top, 10)
+            NavigationButton {
+                PrimaryButtonView(title: "Continue")
+            } destination: {
+                OtpVerificationView()
+            }
+            .padding(.top, 10)
             
             
             HStack {
