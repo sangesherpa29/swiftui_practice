@@ -235,7 +235,6 @@
 		33D0180A2B3A728100914A67 = {
 			isa = PBXGroup;
 			children = (
-				330762842B453C2800F1CB1A /* NavigationButton.swift */,
 				33D018152B3A728200914A67 /* SwiftuiPractice */,
 				33D018262B3A728200914A67 /* SwiftuiPracticeTests */,
 				33D018302B3A728200914A67 /* SwiftuiPracticeUITests */,
@@ -258,6 +257,7 @@
 		33D018152B3A728200914A67 /* SwiftuiPractice */ = {
 			isa = PBXGroup;
 			children = (
+				330762842B453C2800F1CB1A /* NavigationButton.swift */,
 				33D018162B3A728200914A67 /* SwiftuiPracticeApp.swift */,
 				33D018182B3A728200914A67 /* ContentView.swift */,
 				3307627A2B45167300F1CB1A /* Launch Screen.storyboard */,
