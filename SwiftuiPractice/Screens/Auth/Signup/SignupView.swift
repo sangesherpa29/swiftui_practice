@@ -29,7 +29,7 @@ struct SignupView: View {
                         dismiss()
                     }
 
-                Text("Get Started")
+                Text("Getting Started")
                     .font(.custom("Poppins-Bold", size: 23))
             }
             .frame(width: UIScreen.main.bounds.width - 40, height: 50, alignment: .leading)
@@ -67,9 +67,9 @@ struct SignupView: View {
             .frame(width: UIScreen.main.bounds.width - 40)
             .padding(10)
             
-            PrimaryButtonView(title: "Continue")
+            PrimaryButtonView(title: "Continue") {}
             
-            HStack {
+            HStack(spacing: 5) {
                 Text("Already have an account? ")
                     .font(.custom("Poppins-Regular", size: 12))
                 

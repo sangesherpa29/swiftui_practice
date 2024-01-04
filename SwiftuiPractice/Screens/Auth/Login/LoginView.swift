@@ -14,7 +14,7 @@ struct LoginView: View {
         VStack {
             Image("logo")
                 .resizable()
-                .frame(width: 190, height: 100)
+                .frame(width: 155, height: 80)
                 .offset(CGSize(width: 0, height: 40.0))
                 .padding(.bottom, 50)
             
@@ -55,7 +55,7 @@ struct LoginView: View {
             .padding(.top, 4)
             .padding(.bottom, 10)
             
-            PrimaryButtonView(title: "Login")
+            PrimaryButtonView(title: "Login") {}
             
             HStack(spacing: 5) {
                 Text("Don't have an account? ")

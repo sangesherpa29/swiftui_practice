@@ -16,6 +16,7 @@ struct ChatTableCellView: View {
             // Conversation Image
             Image(image)
                 .resizable()
+                .scaledToFit()
                 .frame(width: 65, height: 65)
                 .clipShape(Circle())
             

@@ -14,7 +14,8 @@ struct OtpVerificationView: View {
         VStack {
             Image("logo")
                 .resizable()
-                .frame(width: 190, height: 100)
+                .frame(width: 155, height: 80)
+                .padding(0)
             
             // Otp verification
             VStack(alignment: .leading, spacing: 12) {
@@ -35,7 +36,7 @@ struct OtpVerificationView: View {
                     .lineSpacing(3)
             }
             .frame(width: UIScreen.main.bounds.width-40, alignment: .leading)
-            .padding(20)
+            .padding(.vertical, 20)
             
             
             // Otp Code Stack
@@ -51,7 +52,7 @@ struct OtpVerificationView: View {
             .padding(.horizontal, 20)
             
             
-            PrimaryButtonView(title: "Submit")
+            PrimaryButtonView(title: "Submit") {}
                 .padding(.vertical)
             
             
@@ -67,10 +68,10 @@ struct OtpVerificationView: View {
                 .font(.custom("Poppins-Medium", size: 14))
                 .foregroundColor(Color.primaryColor)
             }
-            .offset(CGSize(width: 0.0, height: -5.0))
         }
-        .offset(CGSize(width: 0.0, height: 50.0))
-        Spacer()
+        .offset(CGSize(width: 0.0, height: -120.0))
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden()
     }
 }
 

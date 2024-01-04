@@ -12,7 +12,10 @@ struct GettingStartedView: View {
         NavigationView {
             VStack {
                 Image("dogimage")
+                    .resizable()
+                    .frame(width: 200, height: 250)
                     .padding(.top, 50)
+                
                 Spacer()
                 
                 Text("Air Bark'n'Bark")
@@ -28,7 +31,7 @@ struct GettingStartedView: View {
                 
                 Spacer()
                 
-                PrimaryButtonView(title: "Get Started")
+                PrimaryButtonView(title: "Get Started") {}
                 .offset(CGSize(width: 0.0, height: -8.0))
                 
                 
@@ -43,7 +46,7 @@ struct GettingStartedView: View {
                     .font(.custom("Poppins-SemiBold", size: 12))
                     .foregroundColor(Color(uiColor: .init(hexString: "#426A5A")))
                 }
-                
+                .padding(.bottom, 10)
             }
         }
     }

@@ -45,7 +45,7 @@ struct ResetPasswordView: View {
             .padding(.vertical, 15)
 
             
-            PrimaryButtonView(title: "Reset Password")
+            PrimaryButtonView(title: "Reset Password") {}
             
             Spacer()
         }

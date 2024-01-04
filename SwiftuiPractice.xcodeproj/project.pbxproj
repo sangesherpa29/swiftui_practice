@@ -39,6 +39,7 @@
 		33D018282B3A728200914A67 /* SwiftuiPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D018272B3A728200914A67 /* SwiftuiPracticeTests.swift */; };
 		33D018322B3A728200914A67 /* SwiftuiPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D018312B3A728200914A67 /* SwiftuiPracticeUITests.swift */; };
 		33D018342B3A728200914A67 /* SwiftuiPracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D018332B3A728200914A67 /* SwiftuiPracticeUITestsLaunchTests.swift */; };
+		33E050B92B468356006857FC /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E050B82B468356006857FC /* BottomSheetView.swift */; };
 		8B4845F24DC3CCC84FC374BE /* Pods_SwiftuiPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E964C3BAE9494BC3919B9C9E /* Pods_SwiftuiPractice.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		33D0182D2B3A728200914A67 /* SwiftuiPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftuiPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D018312B3A728200914A67 /* SwiftuiPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftuiPracticeUITests.swift; sourceTree = "<group>"; };
 		33D018332B3A728200914A67 /* SwiftuiPracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftuiPracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		33E050B82B468356006857FC /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		6BF5DB0F22151AE13F6EDC30 /* Pods-SwiftuiPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftuiPractice.release.xcconfig"; path = "Target Support Files/Pods-SwiftuiPractice/Pods-SwiftuiPractice.release.xcconfig"; sourceTree = "<group>"; };
 		E964C3BAE9494BC3919B9C9E /* Pods_SwiftuiPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftuiPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -231,6 +233,7 @@
 				3307628D2B45603D00F1CB1A /* TopStackView.swift */,
 				330762922B4561D000F1CB1A /* TextComponents.swift */,
 				330762942B45640200F1CB1A /* ToggleSwitchView.swift */,
+				33E050B82B468356006857FC /* BottomSheetView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				330762932B4561D000F1CB1A /* TextComponents.swift in Sources */,
 				330762912B4561A900F1CB1A /* ChatTabView.swift in Sources */,
 				33D018192B3A728200914A67 /* ContentView.swift in Sources */,
+				33E050B92B468356006857FC /* BottomSheetView.swift in Sources */,
 				330762882B455B9500F1CB1A /* LoginView.swift in Sources */,
 				33BD4C482B4655E000F43E81 /* ChatTableCellView.swift in Sources */,
 				3307627F2B45308000F1CB1A /* View.swift in Sources */,
