@@ -14,6 +14,12 @@ struct ChatDetailsView: View {
         VStack {
             // Conversation title
             ChatTopbarView()
+            
+            HStack {
+                PrimaryButtonView(title: "Send Request") {}
+                SecondaryButtonView(title: "Manage Bookings") {}
+            }
+            .background(.cyan)
         }
         .padding(.SCREEN_PADDING)
         .navigationBarBackButtonHidden()
