@@ -20,21 +20,7 @@ struct SignupView: View {
             
             
             // Getting Started
-            VStack(alignment: .leading, spacing: 10) {
-                Image("arrow")
-                    .resizable()
-                    .frame(width: 50, height: 30)
-                    .offset(CGSize(width: -11.0, height: 0.0))
-                    .onTapGesture {
-                        dismiss()
-                    }
-
-                Text("Getting Started")
-                    .font(.custom("Poppins-Bold", size: 23))
-            }
-            .frame(width: UIScreen.main.bounds.width - 40, height: 50, alignment: .leading)
-            .padding(20)
-            
+            TitleWithArrowView(title: "Getting Started")
             
             VStack(alignment: .leading, spacing: 15) {
                 OutlinedTextField(text: "Email", alignment: .leading, padding: 12)

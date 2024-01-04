@@ -8,31 +8,31 @@
 import SwiftUI
 
 struct ToggleSwitchView: View {
+    @State var isSwitchedOn = false
     var body: some View {
         ZStack {
             RoundedRectangle(cornerSize: CGSize(width: 5, height: 5))
-                .frame(width: 150, height: 52)
+                .frame(width: 140, height: 45)
                 .foregroundColor(.primaryColor)
             
             HStack(alignment: .center, spacing: 15) {
-                Toggle("", isOn: .constant(true))
-                    .frame(width: 50)
-                    .toggleStyle(.switch)
+                Toggle(isOn: $isSwitchedOn, label: {
+                })
+                .toggleStyle(CustomToggleStyle())
+                .frame(width: 50)
                 
                 Text("Available")
                     .font(.custom("Poppins-Medium", size: 12))
                     .foregroundColor(.white)
             }
+            .offset(CGSize(width: -5.0, height: 0.0))
             .padding(0)
         }
-//        Text("Somethign")
-//        CustomToggler().makeBody(configuration: ToggleStyle.Configuration)
     }
 }
 
-struct CustomToggler: ToggleStyle {
-    var onColor = Color.green
-    var offColor = Color.gray
+struct CustomToggleStyle: ToggleStyle {
+    var onOffColor = Color.white
     var thumbColor = Color.primaryColor
     
     func makeBody(configuration : Self.Configuration) -> some View {
@@ -42,8 +42,8 @@ struct CustomToggler: ToggleStyle {
             Spacer()
             
             RoundedRectangle(cornerRadius: 16, style: .circular)
-                .fill(configuration.isOn ? onColor : offColor)
-                .frame(width: 50, height: 30)
+                .fill(onOffColor)
+                .frame(width: 40, height: 20)
                 .overlay(
                     Circle()
                         .fill(thumbColor)

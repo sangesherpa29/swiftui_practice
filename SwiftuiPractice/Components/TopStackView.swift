@@ -18,7 +18,7 @@ struct TopStackView: View {
             
             Image("notification_icon")
                 .resizable()
-                .frame(width: 20, height: 20)
+                .frame(width: 22, height: 22)
         }
         .padding(.bottom)
     }

@@ -17,7 +17,7 @@ struct BottomSheetView: View {
         }
         .sheet(isPresented: $isShowing) {
                 VStack(spacing: 0){
-                    Text("Select an option")
+                    Text("Select option")
                         .font(.custom("Poppins-Medium", size: 14))
                         .frame(width: 350, alignment: .leading)
                         .padding(.bottom, 10)

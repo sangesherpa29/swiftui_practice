@@ -18,26 +18,7 @@ struct OtpVerificationView: View {
                 .padding(0)
             
             // Otp verification
-            VStack(alignment: .leading, spacing: 12) {
-                Image("arrow")
-                    .resizable()
-                    .frame(width: 50, height: 30)
-                    .offset(CGSize(width: -11.0, height: 6.0))
-                    .onTapGesture {
-                        dismiss()
-                    }
-                    .padding(.bottom, 5)
-                
-                Text("OTP Verification")
-                    .font(.custom("Poppins-Bold", size: 23))
-                
-                Text(String.Register.authenticationText)
-                    .font(.custom("Poppins-Light", size: 15))
-                    .lineSpacing(3)
-            }
-            .frame(width: UIScreen.main.bounds.width-40, alignment: .leading)
-            .padding(.vertical, 20)
-            
+            TitleWithArrowView(title: "OTP Verification")
             
             // Otp Code Stack
             HStack(spacing: 12) {
