@@ -14,7 +14,7 @@ struct OutlinedTextField: View {
     
     var body: some View {
         TextField("", text: $text)
-            .font(.custom("Poppins-Regular", size: 14))
+            .font(.custom("Poppins-Regular", size: 12))
             .foregroundColor(.black).opacity(0.5)
             .padding(padding)
             .overlay(RoundedRectangle(cornerRadius: 4).stroke(.black, lineWidth: 0.2))

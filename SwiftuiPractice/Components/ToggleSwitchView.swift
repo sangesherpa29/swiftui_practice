@@ -11,22 +11,50 @@ struct ToggleSwitchView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerSize: CGSize(width: 5, height: 5))
-                .frame(width: 170, height: 60)
+                .frame(width: 150, height: 52)
                 .foregroundColor(.primaryColor)
             
             HStack(alignment: .center, spacing: 15) {
                 Toggle("", isOn: .constant(true))
-                    .controlSize(.mini)
                     .frame(width: 50)
-                    .tint(.white)
+                    .toggleStyle(.switch)
                 
                 Text("Available")
-                    .font(.custom("Poppins-Regular", size: 14))
+                    .font(.custom("Poppins-Medium", size: 12))
                     .foregroundColor(.white)
             }
-            .frame(width: 180, height: 50)
+            .padding(0)
         }
-        .padding(0)
+//        Text("Somethign")
+//        CustomToggler().makeBody(configuration: ToggleStyle.Configuration)
+    }
+}
+
+struct CustomToggler: ToggleStyle {
+    var onColor = Color.green
+    var offColor = Color.gray
+    var thumbColor = Color.primaryColor
+    
+    func makeBody(configuration : Self.Configuration) -> some View {
+        HStack {
+            configuration.label
+            
+            Spacer()
+            
+            RoundedRectangle(cornerRadius: 16, style: .circular)
+                .fill(configuration.isOn ? onColor : offColor)
+                .frame(width: 50, height: 30)
+                .overlay(
+                    Circle()
+                        .fill(thumbColor)
+                        .shadow(radius: 1, x: 0, y: 1)
+                        .padding(1.5)
+                        .offset(x: configuration.isOn ? 10 : -10))
+                .animation(Animation.easeInOut(duration: 0.2))
+                .onTapGesture { configuration.isOn.toggle() }
+        }
+        .font(.title)
+        .padding(.horizontal)
     }
 }
 

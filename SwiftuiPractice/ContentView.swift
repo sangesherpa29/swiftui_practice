@@ -9,7 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        GettingStartedView()
+        TabView {
+            GettingStartedView()
+                .tabItem {
+                    Image(systemName: "house")
+                }
+            
+            ChatTabView()
+                .tabItem {
+                    Image(systemName: "person")
+//                    Image(systemName: "ellipsis.message")
+                }
+            
+            SignupView()
+                .tabItem {
+                    Image(systemName: "person")
+                        .renderingMode(.template)
+                }
+        }
+        .accentColor(.primaryColor)
+        
     }
 }
 

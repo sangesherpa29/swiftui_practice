@@ -51,10 +51,8 @@ struct OtpVerificationView: View {
             .padding(.horizontal, 20)
             
             
-            PrimaryButtonView(title: "Submit") {
-                SignupView()
-            }
-            .padding(.vertical)
+            PrimaryButtonView(title: "Submit")
+                .padding(.vertical)
             
             
             // Bottom Text

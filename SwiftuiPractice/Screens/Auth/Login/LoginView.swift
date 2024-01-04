@@ -55,10 +55,7 @@ struct LoginView: View {
             .padding(.top, 4)
             .padding(.bottom, 10)
             
-            PrimaryButtonView(title: "Login") {
-                SignupView()
-            }
-            
+            PrimaryButtonView(title: "Login")
             
             HStack(spacing: 5) {
                 Text("Don't have an account? ")

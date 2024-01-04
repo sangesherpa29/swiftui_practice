@@ -17,7 +17,7 @@ struct LargeText: View {
     @State var text: String = ""
     var body: some View {
         Text(text)
-            .font(.custom("Poppins-Bold", size: 23))
+            .font(.custom("Poppins-SemiBold", size: 25))
     }
 }
 

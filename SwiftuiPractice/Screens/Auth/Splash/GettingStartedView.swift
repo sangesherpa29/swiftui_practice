@@ -28,24 +28,21 @@ struct GettingStartedView: View {
                 
                 Spacer()
                 
-                PrimaryButtonView(title: "Get Started") {
-                    SignupView()
-                }
+                PrimaryButtonView(title: "Get Started")
                 .offset(CGSize(width: 0.0, height: -8.0))
                 
                 
                 // Optional SignIn
                 HStack(spacing: 5) {
                     Text("Already have an account ?")
-                        .font(.custom("Poppins-Regular", size: 14))
+                        .font(.custom("Poppins-Regular", size: 12))
                     
-                    NavigationLink("Log In") {
+                    NavigationLink("Login") {
                         SignupView()
                     }
-                    .font(.custom("Poppins-SemiBold", size: 14))
+                    .font(.custom("Poppins-SemiBold", size: 12))
                     .foregroundColor(Color(uiColor: .init(hexString: "#426A5A")))
                 }
-                .padding(.vertical, 5)
                 
             }
         }

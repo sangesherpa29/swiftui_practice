@@ -12,23 +12,15 @@ struct TopStackView: View {
         HStack {
             Image("dog_icon")
                 .resizable()
-                .frame(width: 50, height: 30)
+                .frame(width: 40, height: 24)
             
             Spacer()
             
-            HStack(spacing: 15) {
-                Image("calendar_icon")
-                    .resizable()
-                    .frame(width: 24, height: 24)
-                
-                Image("notification_icon")
-                    .resizable()
-                    .frame(width: 25, height: 25)
-            }
+            Image("notification_icon")
+                .resizable()
+                .frame(width: 20, height: 20)
         }
-        .padding(.SCREEN_PADDING)
-        
-        Spacer()
+        .padding(.bottom)
     }
 }
 

@@ -14,7 +14,7 @@ struct SignupView: View {
         VStack {
             Image("logo")
                 .resizable()
-                .frame(width: 190, height: 100)
+                .frame(width: 155, height: 80)
                 .offset(CGSize(width: 0, height: 40.0))
                 .padding(.bottom, 50)
             
@@ -36,14 +36,14 @@ struct SignupView: View {
             .padding(20)
             
             
-            VStack(alignment: .leading, spacing: 14) {
-                OutlinedTextField(text: "Email", alignment: .leading)
-                OutlinedTextField(text: "Password", alignment: .leading)
-                OutlinedTextField(text: "Confirm password", alignment: .leading)
+            VStack(alignment: .leading, spacing: 15) {
+                OutlinedTextField(text: "Email", alignment: .leading, padding: 12)
+                OutlinedTextField(text: "Password", alignment: .leading, padding: 12)
+                OutlinedTextField(text: "Confirm password", alignment: .leading, padding: 12)
             }
             .frame(width: UIScreen.main.bounds.width - 40)
             .padding(.horizontal, 20)
-            .padding(.vertical, 15)
+            .padding(.vertical, 10)
             
             
             HStack(alignment: .top, spacing: 10) {
@@ -54,12 +54,12 @@ struct SignupView: View {
                 
                 VStack(alignment: .leading) {
                     Text(String.Register.termsCaption)
-                        .font(.custom("Poppins-Light", size: 14))
+                        .font(.custom("Poppins-Light", size: 12))
                         .offset(CGSize(width: 4.0, height: 0.0))
                     
                     Button("Terms and Conditions") {}
                         .foregroundColor(.primaryColor)
-                        .font(.custom("Poppins-SemiBold", size: 14))
+                        .font(.custom("Poppins-SemiBold", size: 12))
                         .offset(CGSize(width: 4.0, height: 0.0))
                 }
                 Spacer()
@@ -67,23 +67,19 @@ struct SignupView: View {
             .frame(width: UIScreen.main.bounds.width - 40)
             .padding(10)
             
-            PrimaryButtonView(title: "Continue") {
-                SignupView()
-            }
-            
+            PrimaryButtonView(title: "Continue")
             
             HStack {
                 Text("Already have an account? ")
-                    .font(.custom("Poppins-Regular", size: 14))
+                    .font(.custom("Poppins-Regular", size: 12))
                 
-                NavigationLink("Log in") {
-                    OtpVerificationView()
+                NavigationLink("Login") {
                     OtpVerificationView()
                 }
-                .font(.custom("Poppins-SemiBold", size: 14))
+                .font(.custom("Poppins-SemiBold", size: 12))
                 .foregroundColor(Color(uiColor: .init(hexString: "#426A5A")))
             }
-            .padding(.top, 8)
+            .padding(.top, 2)
             
             Spacer()
         }

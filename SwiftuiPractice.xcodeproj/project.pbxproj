@@ -31,6 +31,7 @@
 		33780ECC2B440D2500F8D8D3 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33780ECB2B440D2500F8D8D3 /* SignupView.swift */; };
 		33780ECE2B440EC300F8D8D3 /* PrimaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33780ECD2B440EC300F8D8D3 /* PrimaryButtonView.swift */; };
 		33780ED02B4417EC00F8D8D3 /* OtpVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33780ECF2B4417EC00F8D8D3 /* OtpVerificationView.swift */; };
+		33BD4C482B4655E000F43E81 /* ChatTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD4C472B4655E000F43E81 /* ChatTableCellView.swift */; };
 		33D018172B3A728200914A67 /* SwiftuiPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D018162B3A728200914A67 /* SwiftuiPracticeApp.swift */; };
 		33D018192B3A728200914A67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D018182B3A728200914A67 /* ContentView.swift */; };
 		33D0181B2B3A728200914A67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33D0181A2B3A728200914A67 /* Assets.xcassets */; };
@@ -85,6 +86,7 @@
 		33780ECB2B440D2500F8D8D3 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		33780ECD2B440EC300F8D8D3 /* PrimaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonView.swift; sourceTree = "<group>"; };
 		33780ECF2B4417EC00F8D8D3 /* OtpVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpVerificationView.swift; sourceTree = "<group>"; };
+		33BD4C472B4655E000F43E81 /* ChatTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableCellView.swift; sourceTree = "<group>"; };
 		33D018132B3A728200914A67 /* SwiftuiPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftuiPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D018162B3A728200914A67 /* SwiftuiPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftuiPracticeApp.swift; sourceTree = "<group>"; };
 		33D018182B3A728200914A67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				330762902B4561A900F1CB1A /* ChatTabView.swift */,
+				33BD4C472B4655E000F43E81 /* ChatTableCellView.swift */,
 			);
 			path = ChatTabs;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				330762912B4561A900F1CB1A /* ChatTabView.swift in Sources */,
 				33D018192B3A728200914A67 /* ContentView.swift in Sources */,
 				330762882B455B9500F1CB1A /* LoginView.swift in Sources */,
+				33BD4C482B4655E000F43E81 /* ChatTableCellView.swift in Sources */,
 				3307627F2B45308000F1CB1A /* View.swift in Sources */,
 				33780EC22B43DD3B00F8D8D3 /* Strings.swift in Sources */,
 				3307627D2B451A6D00F1CB1A /* Dimension.swift in Sources */,
