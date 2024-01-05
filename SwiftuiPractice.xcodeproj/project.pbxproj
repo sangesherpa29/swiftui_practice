@@ -21,6 +21,7 @@
 		336F22FD2B47C603004779CD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336F22FC2B47C603004779CD /* ProfileView.swift */; };
 		336F22FF2B47C644004779CD /* CircularImageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336F22FE2B47C644004779CD /* CircularImageComponent.swift */; };
 		336F23012B47CBCD004779CD /* OptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336F23002B47CBCD004779CD /* OptionView.swift */; };
+		336F23042B47F518004779CD /* FullProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336F23032B47F518004779CD /* FullProfileView.swift */; };
 		33780E912B43C53E00F8D8D3 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33780E902B43C53E00F8D8D3 /* SplashScreen.swift */; };
 		33780EBA2B43DABB00F8D8D3 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33780EB42B43DABB00F8D8D3 /* Poppins-SemiBold.ttf */; };
 		33780EBB2B43DABB00F8D8D3 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33780EB52B43DABB00F8D8D3 /* Poppins-Italic.ttf */; };
@@ -86,6 +87,7 @@
 		336F22FC2B47C603004779CD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		336F22FE2B47C644004779CD /* CircularImageComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageComponent.swift; sourceTree = "<group>"; };
 		336F23002B47CBCD004779CD /* OptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionView.swift; sourceTree = "<group>"; };
+		336F23032B47F518004779CD /* FullProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullProfileView.swift; sourceTree = "<group>"; };
 		33780E902B43C53E00F8D8D3 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		33780EA92B43CDCA00F8D8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		33780EB42B43DABB00F8D8D3 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -203,6 +205,14 @@
 				336F22FC2B47C603004779CD /* ProfileView.swift */,
 			);
 			path = ProfileTab;
+			sourceTree = "<group>";
+		};
+		336F23022B47F506004779CD /* FullProfile */ = {
+			isa = PBXGroup;
+			children = (
+				336F23032B47F518004779CD /* FullProfileView.swift */,
+			);
+			path = FullProfile;
 			sourceTree = "<group>";
 		};
 		33780E8F2B43C52700F8D8D3 /* Screens */ = {
@@ -360,6 +370,7 @@
 		33E050C62B46B0B6006857FC /* ChatDetails */ = {
 			isa = PBXGroup;
 			children = (
+				336F23022B47F506004779CD /* FullProfile */,
 				33E050C72B46B0C4006857FC /* ChatDetailsView.swift */,
 			);
 			path = ChatDetails;
@@ -569,6 +580,7 @@
 				336F22FA2B47BCE7004779CD /* AnimatedProfileStatView.swift in Sources */,
 				33780ECC2B440D2500F8D8D3 /* SignupView.swift in Sources */,
 				33E050BE2B46A20E006857FC /* NotificationsItemView.swift in Sources */,
+				336F23042B47F518004779CD /* FullProfileView.swift in Sources */,
 				330762932B4561D000F1CB1A /* TextComponents.swift in Sources */,
 				330762912B4561A900F1CB1A /* ChatTabView.swift in Sources */,
 				336F23012B47CBCD004779CD /* OptionView.swift in Sources */,

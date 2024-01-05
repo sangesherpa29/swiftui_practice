@@ -7,7 +7,13 @@
 
 import SwiftUI
 
-struct TopStackView: View {
+struct TopStackView<V: View>: View {
+    private var destinationView: V
+    
+    init(destinationView: V) {
+        self.destinationView = destinationView
+    }
+    
     var body: some View {
         HStack {
             Image("dog_icon")
@@ -16,14 +22,17 @@ struct TopStackView: View {
             
             Spacer()
             
-            Image("notification_icon")
-                .resizable()
-                .frame(width: 22, height: 22)
+            NavigationLink(destination: destinationView) {
+                Image("notification_icon")
+                    .resizable()
+                    .frame(width: 22, height: 22)
+            }
+            
         }
         .padding(.bottom)
     }
 }
 
 #Preview {
-    TopStackView()
+    TopStackView(destinationView: EmptyView())
 }

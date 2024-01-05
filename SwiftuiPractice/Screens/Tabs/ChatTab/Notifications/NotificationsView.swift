@@ -18,15 +18,14 @@ struct NotificationsView: View {
         Notification(title: "test (3 paws).",
                      fromPerson: Person(name: "Micheal", image: "person1")),
         Notification(title: "You have a new minding request from airbnb1.",
-                     fromPerson: Person(name: "Junior", image: "person2")),
-        Notification(title: "airbnb1 has accepted your minding request.",
-                     fromPerson: Person(name: "Marshall", image: "person3"))
+                     fromPerson: Person(name: "Junior", image: "person2"))
     ]
     
     var body: some View {
         NavigationStack {
             // Top Title
             TitleWithArrowView(title: "Notifications")
+                .padding(.vertical)
             
             // Notifications list
             List(notifications, id: \.id) { notification in
@@ -36,7 +35,8 @@ struct NotificationsView: View {
             }
             .listStyle(PlainListStyle())
         }
-        .navigationTitle("Notifications")
+        .navigationTitle("")
+        .navigationBarBackButtonHidden()
     }
 }
 

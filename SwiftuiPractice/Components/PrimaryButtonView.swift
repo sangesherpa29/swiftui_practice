@@ -18,7 +18,7 @@ struct PrimaryButtonView: View {
                     .stroke(Color.primaryColor, lineWidth: 1)
                     .fill(Color.primaryColor)
                     .frame(minWidth: 0, maxWidth: .infinity)
-                    .frame(height: 45)
+                    .frame(height: 40)
                     .foregroundColor(Color(uiColor: .init(hexString: "#426A5A")))
                 
                 Text(title)

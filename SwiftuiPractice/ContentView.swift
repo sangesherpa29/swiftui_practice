@@ -13,14 +13,20 @@ struct ContentView: View {
             ChatTabView()
                 .tabItem {
                     Image(systemName: "ellipsis.message")
+                    Text("Chat")
                 }
+                .toolbarBackground(.visible, for: .tabBar)
+                .toolbarBackground(Color.white, for: .tabBar)
             
             ProfileView()
                 .tabItem {
                     Image(systemName: "person")
-                        .renderingMode(.template)
+                    Text("Profile")
                 }
+                .toolbarBackground(.visible, for: .tabBar)
+                .toolbarBackground(Color.white, for: .tabBar)
         }
+        .frame(height: 850)
         .accentColor(.primaryColor)
     }
 }

@@ -12,7 +12,7 @@ struct BottomSheetView: View {
     
     var body: some View {
         VStack(spacing: 0){
-            Text("Select option")
+            Text("Select Option")
                 .font(.custom("Poppins-Medium", size: 14))
                 .frame(width: 350, alignment: .leading)
                 .padding(.bottom, 10)
@@ -32,10 +32,10 @@ struct BottomSheetView: View {
 struct BottomSheetItemContainerView: View {
     var body: some View {
         VStack(spacing: 10) {
-            BottomSheetSingleItemView(title: "send a Request")
-            BottomSheetSingleItemView(title: "rate this minder")
-            BottomSheetSingleItemView(title: "report this minder")
-            BottomSheetSingleItemView(title: "view profile")
+            BottomSheetSingleItemView(title: "Send a Request")
+            BottomSheetSingleItemView(title: "Rate and Review")
+            BottomSheetSingleItemView(title: "Report This Minder")
+            BottomSheetSingleItemView(title: "View Profile")
         }
         .padding()
     }
@@ -58,13 +58,12 @@ struct BottomSheetSingleItemView: View {
                 
                 HStack {
                     Text(title)
-                        .textCase(.uppercase)
                         .foregroundColor(.black)
                         .font(.custom("Poppins-Regular", size: 12))
                     
                     Spacer()
                     
-                    Image("smaller_arrow_icon")
+                    Image("smaller_arrow_icon_gray")
                         .resizable()
                         .frame(width: 8, height: 12)
                         .onTapGesture {

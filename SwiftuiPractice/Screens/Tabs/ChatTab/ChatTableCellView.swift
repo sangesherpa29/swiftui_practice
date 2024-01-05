@@ -45,7 +45,6 @@ struct ChatTableCellView: View {
                 .foregroundColor(.secondary)
                 .offset(CGSize(width: -5.0, height: -40.0))
         }
-        .frame(width: .infinity)
         .padding(.vertical, 10)
         .cornerRadius(10)
     }

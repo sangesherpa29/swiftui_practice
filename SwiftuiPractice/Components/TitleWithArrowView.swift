@@ -18,8 +18,8 @@ struct TitleWithArrowView: View {
             }, label: {
                 Image("arrow")
                     .resizable()
-                    .frame(width: 50, height: 30)
-                    .offset(CGSize(width: -11.0, height: 0.0))
+                    .frame(width: 50, height: 30, alignment: .leading)
+                    .padding(.horizontal, -12)
             })
             
             Text(title)

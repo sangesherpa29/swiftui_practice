@@ -17,7 +17,7 @@ struct ChatTabView: View {
     var body: some View {
         NavigationStack {
             VStack() {
-                TopStackView()
+                TopStackView(destinationView: NotificationsView())
                 
                 HStack {
                     LargeText(text: "Inbox")
@@ -30,6 +30,7 @@ struct ChatTabView: View {
                 List(people, id: \.id) { person in
                     NavigationLink(destination: ChatDetailsView()) {
                         ChatTableCellView(name: person.name, image: person.image)
+                            .cornerRadius(10)
                     }
                 }
                 .listStyle(PlainListStyle())
