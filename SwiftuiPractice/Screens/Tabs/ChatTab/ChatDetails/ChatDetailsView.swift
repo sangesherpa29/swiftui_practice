@@ -9,22 +9,62 @@ import SwiftUI
 
 struct ChatDetailsView: View {
     @Environment(\.dismiss) private var dismiss
+    @State var text: String = ""
+    
+    @State var manageBookingOpen = false
     
     var body: some View {
         VStack {
-            // Conversation title
-            ChatTopbarView()
-            
-            HStack {
-                PrimaryButtonView(title: "Send Request") {}
-                SecondaryButtonView(title: "Manage Bookings") {}
+            VStack {
+                // Conversation title
+                ChatTopbarView()
+                
+                // Button Stack
+                HStack {
+                    PrimaryButtonView(title: "Send Request") {}
+                    
+                    ClearButtonView(title: "Manage Bookings") {
+                        manageBookingOpen.toggle()
+                    }
+                }
             }
-            .background(.cyan)
+            .navigationBarBackButtonHidden()
+            
+            Spacer()
         }
-        .padding(.SCREEN_PADDING)
-        .navigationBarBackButtonHidden()
+        .padding(.horizontal, .SCREEN_PADDING)
+        .sheet(isPresented: $manageBookingOpen, content: {
+            BottomSheetView()
+                .presentationDetents([.fraction(0.5)])
+        })
+//        .offset(CGSize(width: 0.0, height: 15.0))
         
-        Spacer()
+        
+        // Bottom Messagebox View
+        ZStack {
+            HStack(alignment: .center, spacing: 20) {
+                CameraButtonView()
+                
+                ZStack {
+                    TextField(text: $text) {
+                        Text("Type a message")
+                            .font(.custom("Poppins-Regular", size: 14))
+                            .foregroundColor(.gray)
+                            .frame(width: .infinity, alignment: .leading)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    }
+                    .font(.custom("Poppins-Regular", size: 14))
+                    .padding(.horizontal, 15)
+                }
+                .frame(height: 40)
+                .background(Color(uiColor: .init(hexString: "#F2F2F2")))
+                
+                SendMessageButtonView().offset(CGSize(width: -5.0, height: 0.0))
+            }
+            .frame(minWidth: 0, maxWidth: .infinity)
+            .frame(height: 60)
+            .padding(.horizontal, .SCREEN_PADDING)
+        }
     }
 }
 
@@ -40,11 +80,7 @@ struct ChatTopbarView: View {
             BackButtonView().offset(CGSize(width: -10.0, height: 0.0))
             
             HStack {
-                Image("person4")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 40, height: 40)
-                    .clipShape(Circle())
+                CircularImageComponent(image: "person4", withWidth: 40, withHeight: 40)
                 
                 Text("Ameer Sa")
                     .font(.custom("Poppins-Medium", size: 16))
@@ -62,7 +98,7 @@ struct ChatTopbarView: View {
             Image("phone_icon")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 25, height: 25)
+                .frame(width: 20, height: 20)
                 .clipShape(Circle())
         }
         .frame(width: UIScreen.main.bounds.width-40)

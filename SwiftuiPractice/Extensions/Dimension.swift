@@ -20,7 +20,7 @@ extension CGFloat {
     
     static var PRIMARY_BUTTON_HEIGHT = 50
     
-    static var SCREEN_PADDING = SIZE_16
+    static var SCREEN_PADDING = 20.0
     static var DEFAULT_BUTTON_CORNER_RADIUS = 8.0
     
     static var SINGLE_LINE_INPUT_FIELD_CORNOR_RADIUS = DEFAULT_BUTTON_CORNER_RADIUS

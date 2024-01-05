@@ -34,7 +34,7 @@ struct ChatTabView: View {
                 }
                 .listStyle(PlainListStyle())
             }
-            .padding(.SCREEN_PADDING)
+            .padding(.horizontal, 16.0)
             
             Spacer()
         }

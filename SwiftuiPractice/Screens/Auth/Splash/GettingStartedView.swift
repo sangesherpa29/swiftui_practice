@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GettingStartedView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Image("dogimage")
                     .resizable()
@@ -32,7 +32,8 @@ struct GettingStartedView: View {
                 Spacer()
                 
                 PrimaryButtonView(title: "Get Started") {}
-                .offset(CGSize(width: 0.0, height: -8.0))
+                    .offset(CGSize(width: 0.0, height: -8.0))
+                    .padding(.horizontal, .SCREEN_PADDING)
                 
                 
                 // Optional SignIn

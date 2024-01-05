@@ -17,6 +17,10 @@
 		330762912B4561A900F1CB1A /* ChatTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330762902B4561A900F1CB1A /* ChatTabView.swift */; };
 		330762932B4561D000F1CB1A /* TextComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330762922B4561D000F1CB1A /* TextComponents.swift */; };
 		330762952B45640200F1CB1A /* ToggleSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330762942B45640200F1CB1A /* ToggleSwitchView.swift */; };
+		336F22FA2B47BCE7004779CD /* AnimatedProfileStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336F22F92B47BCE7004779CD /* AnimatedProfileStatView.swift */; };
+		336F22FD2B47C603004779CD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336F22FC2B47C603004779CD /* ProfileView.swift */; };
+		336F22FF2B47C644004779CD /* CircularImageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336F22FE2B47C644004779CD /* CircularImageComponent.swift */; };
+		336F23012B47CBCD004779CD /* OptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336F23002B47CBCD004779CD /* OptionView.swift */; };
 		33780E912B43C53E00F8D8D3 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33780E902B43C53E00F8D8D3 /* SplashScreen.swift */; };
 		33780EBA2B43DABB00F8D8D3 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33780EB42B43DABB00F8D8D3 /* Poppins-SemiBold.ttf */; };
 		33780EBB2B43DABB00F8D8D3 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33780EB52B43DABB00F8D8D3 /* Poppins-Italic.ttf */; };
@@ -45,7 +49,7 @@
 		33E050C32B46AABB006857FC /* SingleNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E050C22B46AABB006857FC /* SingleNotificationView.swift */; };
 		33E050C52B46ADB9006857FC /* TitleWithArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E050C42B46ADB9006857FC /* TitleWithArrowView.swift */; };
 		33E050C82B46B0C4006857FC /* ChatDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E050C72B46B0C4006857FC /* ChatDetailsView.swift */; };
-		33E050CA2B46B3E5006857FC /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E050C92B46B3E5006857FC /* BackButtonView.swift */; };
+		33E050CA2B46B3E5006857FC /* IconComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E050C92B46B3E5006857FC /* IconComponents.swift */; };
 		8B4845F24DC3CCC84FC374BE /* Pods_SwiftuiPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E964C3BAE9494BC3919B9C9E /* Pods_SwiftuiPractice.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +82,10 @@
 		330762902B4561A900F1CB1A /* ChatTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTabView.swift; sourceTree = "<group>"; };
 		330762922B4561D000F1CB1A /* TextComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextComponents.swift; sourceTree = "<group>"; };
 		330762942B45640200F1CB1A /* ToggleSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleSwitchView.swift; sourceTree = "<group>"; };
+		336F22F92B47BCE7004779CD /* AnimatedProfileStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedProfileStatView.swift; sourceTree = "<group>"; };
+		336F22FC2B47C603004779CD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		336F22FE2B47C644004779CD /* CircularImageComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageComponent.swift; sourceTree = "<group>"; };
+		336F23002B47CBCD004779CD /* OptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionView.swift; sourceTree = "<group>"; };
 		33780E902B43C53E00F8D8D3 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		33780EA92B43CDCA00F8D8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		33780EB42B43DABB00F8D8D3 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -110,7 +118,7 @@
 		33E050C22B46AABB006857FC /* SingleNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleNotificationView.swift; sourceTree = "<group>"; };
 		33E050C42B46ADB9006857FC /* TitleWithArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleWithArrowView.swift; sourceTree = "<group>"; };
 		33E050C72B46B0C4006857FC /* ChatDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailsView.swift; sourceTree = "<group>"; };
-		33E050C92B46B3E5006857FC /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
+		33E050C92B46B3E5006857FC /* IconComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconComponents.swift; sourceTree = "<group>"; };
 		6BF5DB0F22151AE13F6EDC30 /* Pods-SwiftuiPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftuiPractice.release.xcconfig"; path = "Target Support Files/Pods-SwiftuiPractice/Pods-SwiftuiPractice.release.xcconfig"; sourceTree = "<group>"; };
 		E964C3BAE9494BC3919B9C9E /* Pods_SwiftuiPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftuiPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -180,12 +188,21 @@
 		3307628F2B45619D00F1CB1A /* ChatTab */ = {
 			isa = PBXGroup;
 			children = (
+				336F22FB2B47C5FA004779CD /* ProfileTab */,
 				33E050C62B46B0B6006857FC /* ChatDetails */,
 				33E050BA2B46A1EE006857FC /* Notifications */,
 				330762902B4561A900F1CB1A /* ChatTabView.swift */,
 				33BD4C472B4655E000F43E81 /* ChatTableCellView.swift */,
 			);
 			path = ChatTab;
+			sourceTree = "<group>";
+		};
+		336F22FB2B47C5FA004779CD /* ProfileTab */ = {
+			isa = PBXGroup;
+			children = (
+				336F22FC2B47C603004779CD /* ProfileView.swift */,
+			);
+			path = ProfileTab;
 			sourceTree = "<group>";
 		};
 		33780E8F2B43C52700F8D8D3 /* Screens */ = {
@@ -250,7 +267,10 @@
 				330762942B45640200F1CB1A /* ToggleSwitchView.swift */,
 				33E050B82B468356006857FC /* BottomSheetView.swift */,
 				33E050C42B46ADB9006857FC /* TitleWithArrowView.swift */,
-				33E050C92B46B3E5006857FC /* BackButtonView.swift */,
+				33E050C92B46B3E5006857FC /* IconComponents.swift */,
+				336F22F92B47BCE7004779CD /* AnimatedProfileStatView.swift */,
+				336F22FE2B47C644004779CD /* CircularImageComponent.swift */,
+				336F23002B47CBCD004779CD /* OptionView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -536,7 +556,7 @@
 			files = (
 				33780ED02B4417EC00F8D8D3 /* OtpVerificationView.swift in Sources */,
 				3307628E2B45603D00F1CB1A /* TopStackView.swift in Sources */,
-				33E050CA2B46B3E5006857FC /* BackButtonView.swift in Sources */,
+				33E050CA2B46B3E5006857FC /* IconComponents.swift in Sources */,
 				33780E912B43C53E00F8D8D3 /* SplashScreen.swift in Sources */,
 				33E050C32B46AABB006857FC /* SingleNotificationView.swift in Sources */,
 				33E050C12B46A519006857FC /* Models.swift in Sources */,
@@ -545,15 +565,19 @@
 				330762832B45331800F1CB1A /* OutlinedTextField.swift in Sources */,
 				33780EC62B43FA8E00F8D8D3 /* GettingStartedView.swift in Sources */,
 				33780EC42B43F56300F8D8D3 /* Colors.swift in Sources */,
+				336F22FD2B47C603004779CD /* ProfileView.swift in Sources */,
+				336F22FA2B47BCE7004779CD /* AnimatedProfileStatView.swift in Sources */,
 				33780ECC2B440D2500F8D8D3 /* SignupView.swift in Sources */,
 				33E050BE2B46A20E006857FC /* NotificationsItemView.swift in Sources */,
 				330762932B4561D000F1CB1A /* TextComponents.swift in Sources */,
 				330762912B4561A900F1CB1A /* ChatTabView.swift in Sources */,
+				336F23012B47CBCD004779CD /* OptionView.swift in Sources */,
 				33D018192B3A728200914A67 /* ContentView.swift in Sources */,
 				33E050C82B46B0C4006857FC /* ChatDetailsView.swift in Sources */,
 				33E050C52B46ADB9006857FC /* TitleWithArrowView.swift in Sources */,
 				33E050B92B468356006857FC /* BottomSheetView.swift in Sources */,
 				330762882B455B9500F1CB1A /* LoginView.swift in Sources */,
+				336F22FF2B47C644004779CD /* CircularImageComponent.swift in Sources */,
 				33BD4C482B4655E000F43E81 /* ChatTableCellView.swift in Sources */,
 				3307627F2B45308000F1CB1A /* View.swift in Sources */,
 				33780EC22B43DD3B00F8D8D3 /* Strings.swift in Sources */,

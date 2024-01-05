@@ -14,11 +14,7 @@ struct ChatTableCellView: View {
     var body: some View {
         HStack(alignment: .center, spacing: 20) {
             // Conversation Image
-            Image(image)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 65, height: 65)
-                .clipShape(Circle())
+            CircularImageComponent(image: image, withWidth: 65, withHeight: 65)
             
             // Conversation Title
             VStack(alignment: .leading, spacing: 10) {

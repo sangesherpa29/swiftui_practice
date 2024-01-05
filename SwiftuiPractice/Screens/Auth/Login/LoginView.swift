@@ -27,7 +27,6 @@ struct LoginView: View {
                 OutlinedTextField(text: "Password", alignment: .leading)
             }
             .frame(width: UIScreen.main.bounds.width - 40)
-            .padding(.horizontal, 20)
             .padding(.vertical, 15)
             
             
@@ -37,7 +36,6 @@ struct LoginView: View {
                 Text(String.Login.forgotPassword)
                     .font(.custom("Poppins-Medium", size: 14))
             }
-            .frame(width: UIScreen.main.bounds.width - 40)
             .padding(.top, 4)
             .padding(.bottom, 10)
             
@@ -58,6 +56,7 @@ struct LoginView: View {
             
             Spacer()
         }
+        .padding(.horizontal, .SCREEN_PADDING)
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden()
     }

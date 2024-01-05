@@ -15,10 +15,18 @@ struct OtpVerificationView: View {
             Image("logo")
                 .resizable()
                 .frame(width: 155, height: 80)
-                .padding(0)
+                .padding(.bottom, 50)
             
             // Otp verification
-            TitleWithArrowView(title: "OTP Verification")
+            VStack {
+                TitleWithArrowView(title: "OTP Verification")
+                
+                Text(String.Register.authenticationText)
+                    .font(.custom("Poppins-Light", size: 12))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 10)
+                    .padding(.bottom, 15)
+            }
             
             // Otp Code Stack
             HStack(spacing: 12) {
@@ -30,7 +38,6 @@ struct OtpVerificationView: View {
                 OutlinedTextField(text: "", alignment: .center, padding: 15)
             }
             .frame(height: 50)
-            .padding(.horizontal, 20)
             
             
             PrimaryButtonView(title: "Submit") {}
@@ -41,15 +48,13 @@ struct OtpVerificationView: View {
             HStack {
                 Text("Code sent. Resend code in")
                     .font(.custom("Poppins-Light", size: 14))
-                    .foregroundColor(.secondary)
                 
-                Button("Timer") {
-                    // Perform some action on submit
-                }
+                Button("Timer") {}
                 .font(.custom("Poppins-Medium", size: 14))
                 .foregroundColor(Color.primaryColor)
             }
         }
+        .padding(.horizontal, .SCREEN_PADDING)
         .offset(CGSize(width: 0.0, height: -120.0))
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden()

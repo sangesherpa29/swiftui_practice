@@ -9,28 +9,23 @@ import SwiftUI
 
 struct BottomSheetView: View {
     @Environment(\.dismiss) private var dismiss
-    @State var isShowing = false
     
     var body: some View {
-        Button("Show sheet") {
-            isShowing.toggle()
-        }
-        .sheet(isPresented: $isShowing) {
-                VStack(spacing: 0){
-                    Text("Select option")
-                        .font(.custom("Poppins-Medium", size: 14))
-                        .frame(width: 350, alignment: .leading)
-                        .padding(.bottom, 10)
+        VStack(spacing: 0){
+            Text("Select option")
+                .font(.custom("Poppins-Medium", size: 14))
+                .frame(width: 350, alignment: .leading)
+                .padding(.bottom, 10)
 
-                    BottomSheetItemContainerView()
-                    
-                    PrimaryButtonView(title: "Close") {
-                        dismiss()
-                    }
-                }
-                .offset(CGSize(width: 0.0, height: 15.0))
-                .presentationDetents([.fraction(0.5)])
+            BottomSheetItemContainerView()
+            
+            PrimaryButtonView(title: "Close") {
+                dismiss()
+            }
+            .padding(.horizontal, .SCREEN_PADDING)
         }
+        .offset(CGSize(width: 0.0, height: 15.0))
+        .presentationDetents([.fraction(0.5)])
     }
 }
 

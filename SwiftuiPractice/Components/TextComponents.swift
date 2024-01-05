@@ -14,7 +14,7 @@ struct TextComponents: View {
 }
 
 struct LargeText: View {
-    @State var text: String = ""
+    @State var text: String = "Large Text"
     var body: some View {
         Text(text)
             .font(.custom("Poppins-SemiBold", size: 25))

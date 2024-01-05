@@ -16,8 +16,7 @@ struct SignupView: View {
                 .resizable()
                 .frame(width: 155, height: 80)
                 .offset(CGSize(width: 0, height: 40.0))
-                .padding(.bottom, 50)
-            
+                .padding(.bottom, 70)
             
             // Getting Started
             TitleWithArrowView(title: "Getting Started")
@@ -27,9 +26,8 @@ struct SignupView: View {
                 OutlinedTextField(text: "Password", alignment: .leading, padding: 12)
                 OutlinedTextField(text: "Confirm password", alignment: .leading, padding: 12)
             }
-            .frame(width: UIScreen.main.bounds.width - 40)
-            .padding(.horizontal, 20)
-            .padding(.vertical, 10)
+            .padding(.top, 30)
+            .padding(.bottom, 10)
             
             
             HStack(alignment: .top, spacing: 10) {
@@ -51,7 +49,7 @@ struct SignupView: View {
                 Spacer()
             }
             .frame(width: UIScreen.main.bounds.width - 40)
-            .padding(10)
+            .padding(.vertical, 10)
             
             PrimaryButtonView(title: "Continue") {}
             
@@ -69,6 +67,7 @@ struct SignupView: View {
             
             Spacer()
         }
+        .padding(.horizontal, .SCREEN_PADDING)
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden()
     }

@@ -37,7 +37,8 @@ extension String {
         static var authenticationText = "A 6-digit authentication code has been sent to your registered email."
     }
     
-    struct Login{
+    struct 
+    Login{
         static var forgotPassword = "Forgot Password ?"
     }
 }

@@ -26,7 +26,6 @@ struct TitleWithArrowView: View {
                 .font(.custom("Poppins-Bold", size: 23))
         }
         .frame(width: UIScreen.main.bounds.width - 40, height: 50, alignment: .leading)
-        .padding(20)
     }
 }
 
