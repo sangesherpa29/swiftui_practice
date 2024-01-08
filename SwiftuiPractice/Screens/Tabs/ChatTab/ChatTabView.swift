@@ -20,7 +20,7 @@ struct ChatTabView: View {
                 TopStackView(destinationView: NotificationsView())
                 
                 HStack {
-                    LargeText(text: "Inbox")
+                    TitleBoldText(text: "Inbox")
                     Spacer()
                     ToggleSwitchView()
                 }

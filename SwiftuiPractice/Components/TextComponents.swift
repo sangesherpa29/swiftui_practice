@@ -9,15 +9,44 @@ import SwiftUI
 
 struct TextComponents: View {
     var body: some View {
-        LargeText()
+        VStack(alignment: .leading) {
+            TitleBoldText()
+            LargeBoldText()
+            IntermediateBoldText()
+            SmallBoldText()
+        }
     }
 }
 
-struct LargeText: View {
+struct TitleBoldText: View {
     @State var text: String = "Large Text"
     var body: some View {
         Text(text)
             .font(.custom("Poppins-SemiBold", size: 25))
+    }
+}
+
+struct LargeBoldText: View {
+    @State var text: String = "Intermediate Text"
+    var body: some View {
+        Text(text)
+            .font(.custom("Poppins-SemiBold", size: 22))
+    }
+}
+
+struct IntermediateBoldText: View {
+    @State var text: String = "Intermediate Text"
+    var body: some View {
+        Text(text)
+            .font(.custom("Poppins-SemiBold", size: 16))
+    }
+}
+
+struct SmallBoldText: View {
+    @State var text: String = "Intermediate Text"
+    var body: some View {
+        Text(text)
+            .font(.custom("Poppins-SemiBold", size: 14))
     }
 }
 

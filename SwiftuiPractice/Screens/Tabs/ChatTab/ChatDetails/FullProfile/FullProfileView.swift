@@ -67,6 +67,20 @@ struct FullProfileView: View {
                         }
                     }
                     
+                    // Outline container
+                    OutlinedContainer(height: 110) {
+                        IntermediateBoldText(text: "Short Bio")
+                        Text("Test")
+                            .font(.custom("Poppins-Light", size: 14))
+                    }
+                    .padding(.top, 10)
+                    
+                    OutlinedContainer(height: 110) {
+                        IntermediateBoldText(text: "Pets")
+                        Text("Test")
+                            .font(.custom("Poppins-Light", size: 14))
+                    }
+                    .padding(.top, 10)
                     
                     Spacer()
                 }
@@ -74,6 +88,7 @@ struct FullProfileView: View {
                 .frame(width: UIScreen.main.bounds.width-40)
             }
         }
+        .background(.black)
         .navigationTitle("")
         .navigationBarBackButtonHidden()
     }
@@ -102,6 +117,34 @@ struct SingleStatView: View {
             Text(title)
                 .font(.custom("Poppins-Regular", size: 12))
                 .foregroundColor(.black.opacity(0.8))
+        }
+    }
+}
+
+struct OutlinedContainer<V: View>: View {
+    var content: () -> V
+    var height: CGFloat = 100
+    
+    init(height: CGFloat, @ViewBuilder content: @escaping () -> V) {
+        self.height = height
+        self.content = content
+    }
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 3)
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .frame(height: height)
+                .foregroundColor(.black.opacity(0.2))
+            
+            RoundedRectangle(cornerRadius: 3)
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .padding(0.4)
+                .foregroundColor(.white)
+            
+            VStack(alignment: .leading, spacing: 12, content: content)
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal, 20)
         }
     }
 }
