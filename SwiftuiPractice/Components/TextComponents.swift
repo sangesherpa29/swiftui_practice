@@ -14,6 +14,7 @@ struct TextComponents: View {
             LargeBoldText()
             IntermediateBoldText()
             SmallBoldText()
+            VerySmallBoldText()
         }
     }
 }
@@ -47,6 +48,14 @@ struct SmallBoldText: View {
     var body: some View {
         Text(text)
             .font(.custom("Poppins-SemiBold", size: 14))
+    }
+}
+
+struct VerySmallBoldText: View {
+    @State var text: String = "Intermediate Text"
+    var body: some View {
+        Text(text)
+            .font(.custom("Poppins-SemiBold", size: 12))
     }
 }
 

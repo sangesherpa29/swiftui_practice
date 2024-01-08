@@ -9,25 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView {
-            ChatTabView()
-                .tabItem {
-                    Image(systemName: "ellipsis.message")
-                    Text("Chat")
-                }
-                .toolbarBackground(.visible, for: .tabBar)
-                .toolbarBackground(Color.white, for: .tabBar)
-            
-            ProfileView()
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("Profile")
-                }
-                .toolbarBackground(.visible, for: .tabBar)
-                .toolbarBackground(Color.white, for: .tabBar)
-        }
-        .frame(height: 850)
-        .accentColor(.primaryColor)
+        FullProfileView()
+//        TabView {
+//            ChatTabView()
+//                .tabItem {
+//                    Image(systemName: "ellipsis.message")
+//                    Text("Chat")
+//                }
+//                .toolbarBackground(.visible, for: .tabBar)
+//                .toolbarBackground(Color.white, for: .tabBar)
+//            
+//            ProfileView()
+//                .tabItem {
+//                    Image(systemName: "person")
+//                    Text("Profile")
+//                }
+//                .toolbarBackground(.visible, for: .tabBar)
+//                .toolbarBackground(Color.white, for: .tabBar)
+//        }
+//        .frame(height: 850)
+//        .accentColor(.primaryColor)
     }
 }
 

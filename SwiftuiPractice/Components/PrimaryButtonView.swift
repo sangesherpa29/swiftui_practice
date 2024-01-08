@@ -18,7 +18,7 @@ struct PrimaryButtonView: View {
                     .stroke(Color.primaryColor, lineWidth: 1)
                     .fill(Color.primaryColor)
                     .frame(minWidth: 0, maxWidth: .infinity)
-                    .frame(height: 40)
+                    .frame(height: 45)
                     .foregroundColor(Color(uiColor: .init(hexString: "#426A5A")))
                 
                 Text(title)
@@ -40,7 +40,7 @@ struct SecondaryButtonView: View {
                 RoundedRectangle(cornerSize: CGSize(width: 5, height: 5))
                     .stroke(.black, lineWidth: 1)
                     .frame(minWidth: 0, maxWidth: .infinity)
-                    .frame(height: 40)
+                    .frame(height: 45)
                     .foregroundColor(.white)
                 
                 Text(title)
@@ -66,7 +66,7 @@ struct ClearButtonView: View {
                 RoundedRectangle(cornerSize: CGSize(width: 5, height: 5))
                     .stroke(borderColor, lineWidth: 0.5)
                     .frame(minWidth: 0, maxWidth: .infinity)
-                    .frame(height: 40)
+                    .frame(height: 45)
                     .foregroundColor(backgroundColor)
                 
                 Text(title)
@@ -81,3 +81,4 @@ struct ClearButtonView: View {
 #Preview {
     PrimaryButtonView(title: "Primary Button") {}
 }
+
