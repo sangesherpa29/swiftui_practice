@@ -85,7 +85,7 @@ struct ProfileView: View {
                     ClearButtonView(title: "Delete account",
                                     titleColor: .red,
                                     backgroundColor: .cyan,
-                                    borderColor: .clear) {}
+                                    borderColor: .black) {}
                     
                     PrimaryButtonView(title: "Logout") {}
                 }

@@ -64,7 +64,7 @@ struct ClearButtonView: View {
         Button(action: action) {
             ZStack {
                 RoundedRectangle(cornerSize: CGSize(width: 5, height: 5))
-                    .stroke(borderColor, lineWidth: 0.5)
+                    .stroke(borderColor, lineWidth: 1)
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .frame(height: 45)
                     .foregroundColor(backgroundColor)
@@ -80,5 +80,9 @@ struct ClearButtonView: View {
 
 #Preview {
     PrimaryButtonView(title: "Primary Button") {}
+}
+
+#Preview {
+    ClearButtonView(title: "Clear Button") {}
 }
 

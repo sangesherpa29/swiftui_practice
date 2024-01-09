@@ -32,9 +32,11 @@ struct BottomSheetView: View {
 struct BottomSheetItemContainerView: View {
     var body: some View {
         VStack(spacing: 10) {
-            BottomSheetSingleItemView(title: "Send a Request")
             BottomSheetSingleItemView(title: "Rate and Review")
-            BottomSheetSingleItemView(title: "Report This Minder")
+            BottomSheetSingleItemView(title: "Send Request")
+            BottomSheetSingleItemView(title: "View Sent Request")
+            BottomSheetSingleItemView(title: "View Received Request")
+            BottomSheetSingleItemView(title: "Report This Account")
             BottomSheetSingleItemView(title: "View Profile")
         }
         .padding()
