@@ -59,7 +59,7 @@ struct FullProfileView: View {
                         
                         // Outline container
                         OutlinedContainer(height: 110) {
-                            IntermediateBoldText(text: "Short Bio")
+                            CustomTextView(text: "Short Bio", font: .poppins_semibold(fontsize: .SIZE_14))
                             Text("Test")
                                 .font(.custom("Poppins-Light", size: 14))
                         }
@@ -67,7 +67,7 @@ struct FullProfileView: View {
 
                         // Pet Container
                         OutlinedContainer {
-                            IntermediateBoldText(text: "Pets")
+                            CustomTextView(text: "Pets", font: .poppins_semibold(fontsize: .SIZE_14))
                             
                             PetContainer(image: "person1",
                                          name: "Kitkat  |  3 years old  |  Labrador",
@@ -83,12 +83,12 @@ struct FullProfileView: View {
                         
                         OutlinedContainer {
                             VStack(alignment: .leading) {
-                                IntermediateBoldText(text: "Breeds")
+                                CustomTextView(text: "Breeds", font: .poppins_semibold(fontsize: .SIZE_14))
                                 InfoTextView(width: 80, text: "Test Breed")
                             }
                             
                             VStack(alignment: .leading) {
-                                IntermediateBoldText(text: "Pet Personality Preference")
+                                CustomTextView(text: "Pet Personality Preference", font: .poppins_semibold(fontsize: .SIZE_14))
                                 InfoTextView(width: 80, text: "Anxious")
                             }
                             .padding(.top, 15)
@@ -136,11 +136,9 @@ struct SingleStatView: View {
                 .resizable()
                 .frame(width: dimension, height: dimension)
             
-            Text(value)
-                .font(.custom("Poppins-SemiBold", size: 16))
+            CustomTextView(text: value, font: .poppins_semibold(fontsize: .SIZE_16))
             
-            Text(title)
-                .font(.custom("Poppins-Regular", size: 12))
+            CustomTextView(text: title, font: .poppins_regular(fontsize: .SIZE_12))
                 .foregroundColor(.black.opacity(0.8))
         }
     }
@@ -201,8 +199,8 @@ struct PetContainer: View {
                     CircularImageComponent(image: image, withWidth: 60, withHeight: 60)
                     
                     VStack(alignment: .leading, spacing: 4) {
-                        VerySmallBoldText(text: name).padding(.bottom, 8)
-                        VerySmallBoldText(text: immnuizationStatus)
+                        CustomTextView(text: name).padding(.bottom, 8)
+                        CustomTextView(text: immnuizationStatus)
                         Text(description)
                             .font(.custom("Poppins-Regular", size: 12))
                     }

@@ -13,7 +13,7 @@ struct ToggleSwitchView: View {
         ZStack {
             RoundedRectangle(cornerSize: CGSize(width: 5, height: 5))
                 .frame(width: 140, height: 45)
-                .foregroundColor(.primaryColor)
+                .foregroundColor(.primaryGreen)
             
             HStack(alignment: .center, spacing: 15) {
                 Toggle(isOn: $isSwitchedOn, label: {
@@ -33,7 +33,7 @@ struct ToggleSwitchView: View {
 
 struct CustomToggleStyle: ToggleStyle {
     var onOffColor = Color.white
-    var thumbColor = Color.primaryColor
+    var thumbColor = Color.primaryGreen
     
     func makeBody(configuration : Self.Configuration) -> some View {
         HStack {

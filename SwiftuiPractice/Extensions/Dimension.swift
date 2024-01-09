@@ -8,14 +8,11 @@
 import Foundation
 
 extension CGFloat {
-    static var SIZE_2 = 2.0
-    static var SIZE_4 = 4.0
-    static var SIZE_6 = 6.0
-    static var SIZE_8 = 8.0
     static var SIZE_12 = 12.0
+    static var SIZE_14 = 14.0
     static var SIZE_16 = 16.0
     static var SIZE_22 = 22.0
-    static var SIZE_36 = 36.0
+    static var SIZE_25 = 25.0
     static var SIZE_46 = 46.0
     
     static var PRIMARY_BUTTON_HEIGHT = 50

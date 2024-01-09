@@ -18,7 +18,7 @@ struct ChatDetailsView: View {
             VStack {
                 VStack {
                     // Conversation title
-                    ChatTopbarView(destinationView: ProfileView())
+                    ChatTopbarView(destinationView: FullProfileView())
                     
                     // Button Stack
                     HStack {
@@ -28,9 +28,10 @@ struct ChatDetailsView: View {
                             manageBookingOpen.toggle()
                         }
                     }
+                    .padding(.bottom)
                     
                     // Animated Profile Stat Container
-                    AnimatedProfileStatContainer()
+                    AnimatedProfileStatContainerView()
                     
                     // Current Minding Request
                     ZStack {
@@ -101,7 +102,7 @@ struct ChatDetailsView: View {
             }
             .padding(.horizontal, .SCREEN_PADDING)
             .sheet(isPresented: $manageBookingOpen, content: {
-                BottomSheetView()
+                BottomSheetView(isShowing: $manageBookingOpen)
                     .presentationDetents([.fraction(0.65)])
             })
             
@@ -150,110 +151,42 @@ struct ChatTopbarView<V: View>: View {
     }
     
     var body: some View {
-        HStack(alignment: .center) {
-            BackButtonView().offset(CGSize(width: -10.0, height: 0.0))
-            
-            NavigationLink(destination: destinationView) {
-                HStack {
-                    CircularImageComponent(image: "person4", withWidth: 40, withHeight: 40)
-                    
-                    Text("Ameer Sa")
-                        .font(.custom("Poppins-Medium", size: 16))
-                        .foregroundColor(.black)
-                    
-                    Image("verified_icon")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 10, height: 10)
-                        .clipShape(Circle())
+        NavigationStack {
+            HStack(alignment: .center) {
+                BackButtonView().offset(CGSize(width: -10.0, height: 0.0))
+                
+                NavigationLink(destination: destinationView) {
+                    HStack {
+                        CircularImageComponent(image: "person4", withWidth: 40, withHeight: 40)
+                        
+                        Text("Ameer Sa")
+                            .font(.custom("Poppins-Medium", size: 16))
+                            .foregroundColor(.black)
+                        
+                        Image("verified_icon")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 10, height: 10)
+                            .clipShape(Circle())
+                    }
                 }
+                .offset(CGSize(width: -10.0, height: 0.0))
+                
+                Spacer()
+                
+                Image("phone_icon")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 20, height: 20)
+                    .clipShape(Circle())
             }
-            .offset(CGSize(width: -10.0, height: 0.0))
-            
-            Spacer()
-            
-            Image("phone_icon")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 20, height: 20)
-                .clipShape(Circle())
+            .frame(width: UIScreen.main.bounds.width-40)
+            .toolbar(.hidden, for: .tabBar)
         }
-        .frame(width: UIScreen.main.bounds.width-40)
-        .toolbar(.hidden, for: .tabBar)
     }
 }
 
 
-struct AnimatedProfileStatContainer: View {
-    @State private var angle = -90.0
-    @State private var showStats: Bool = false
-    
-    var body: some View {
-        ZStack {
-            VStack(spacing: 0) {
-                // Stats Container Stack
-                if showStats {
-                    HStack(alignment: .center) {
-                        SingleStatView(dimension: 40, image: "charge_icon", title: "Charges", value: "18.0")
-                        SingleStatView(dimension: 40, image: "experience_icon", title: "Experience", value: "1.0 years")
-                            .offset(CGSize(width: 4.0, height: 0.0))
-                            .padding(.horizontal, 50)
-                        SingleStatView(dimension: 40, image: "rating_icon", title: "Rating", value: "4.2 stars")
-                    }
-                    .offset(CGSize(width: 4.0, height: 0.0))
-                    .padding(.top, 20)
-                    .frame(width: UIScreen.main.bounds.width-40)
-                }
-                
-                InfoTextWithImageView(width: 200,
-                                      image: "distance_icon",
-                                      text: "< 50 km away from you",
-                                      backgroundColor: .clear)
-                .padding(.top, 10)
-                
-                
-                HStack {
-                    NavigationLink(destination: FullProfileView()) {
-                        HStack(spacing: 5) {
-                            Text("See full profile")
-                                .font(.custom("Poppins-Regular", size: 12))
-                            
-                            Image("smaller_arrow_icon_gray")
-                                .resizable()
-                                .frame(width: 8, height: 12)
-                        }
-                        .foregroundColor(.black)
-                    }
-                    
-                    Spacer()
-                    
-                    // Toggler Button
-                    Button(action: {
-                        angle += 180
-                        showStats.toggle()
-                    }) {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 5)
-                                .stroke(Color.primaryColor, lineWidth: 1)
-                                .frame(width: 30, height: 23)
-//                                .animation(.easeInOut(duration: 0))
-                            
-                            Image("smaller_arrow_icon_gray")
-                                .resizable()
-                                .frame(width: 8, height: 13)
-                                .rotationEffect(.degrees(angle))
-                                .background(.clear)
-                        }
-                        .animation(.linear(duration: 0))
-                        .background(.white)
-                    }
-                }
-                .padding(.horizontal, .SCREEN_PADDING)
-                .padding(.bottom)
-                
-            }
-        }
-        .frame(maxWidth: .infinity)
-        .background(Color(uiColor: .init(hexString: "#F0F6F4")))
-    }
+#Preview {
+    ChatTopbarView(destinationView: FullProfileView())
 }

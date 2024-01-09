@@ -44,8 +44,8 @@ struct ProfileView: View {
                     Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                         ZStack {
                             RoundedRectangle(cornerSize: CGSize(width: 5, height: 5))
-                                .stroke(Color.primaryColor, lineWidth: 1)
-                                .fill(Color.primaryColor)
+                                .stroke(Color.primaryGreen, lineWidth: 1)
+                                .fill(Color.primaryGreen)
                                 .frame(minWidth: 0, maxWidth: .infinity)
                                 .frame(height: 45)
                                 .foregroundColor(Color(uiColor: .init(hexString: "#426A5A")))
@@ -83,9 +83,9 @@ struct ProfileView: View {
                 
                 VStack {
                     ClearButtonView(title: "Delete account",
-                                    titleColor: .red,
+                                    titleColor: .primaryRed,
                                     backgroundColor: .cyan,
-                                    borderColor: .black) {}
+                                    borderColor: .primaryRed) {}
                     
                     PrimaryButtonView(title: "Logout") {}
                 }

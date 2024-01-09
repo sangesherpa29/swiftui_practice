@@ -38,11 +38,11 @@ struct SignupView: View {
                 
                 VStack(alignment: .leading) {
                     Text(String.Register.termsCaption)
-                        .font(.custom("Poppins-Light", size: 12))
+                        .font(.poppins_light(fontsize: .SIZE_12))
                         .offset(CGSize(width: 4.0, height: 0.0))
                     
                     Button("Terms and Conditions") {}
-                        .foregroundColor(.primaryColor)
+                        .foregroundColor(.primaryGreen)
                         .font(.custom("Poppins-SemiBold", size: 12))
                         .offset(CGSize(width: 4.0, height: 0.0))
                 }
@@ -54,8 +54,7 @@ struct SignupView: View {
             PrimaryButtonView(title: "Continue") {}
             
             HStack(spacing: 5) {
-                Text("Already have an account? ")
-                    .font(.custom("Poppins-Regular", size: 12))
+                CustomTextView(text: "Already have an account ?", font: .poppins_regular(fontsize: .SIZE_12))
                 
                 NavigationLink("Login") {
                     OtpVerificationView()

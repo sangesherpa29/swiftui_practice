@@ -51,7 +51,7 @@ struct OtpVerificationView: View {
                 
                 Button("Timer") {}
                 .font(.custom("Poppins-Medium", size: 14))
-                .foregroundColor(Color.primaryColor)
+                .foregroundColor(Color.primaryGreen)
             }
         }
         .padding(.horizontal, .SCREEN_PADDING)

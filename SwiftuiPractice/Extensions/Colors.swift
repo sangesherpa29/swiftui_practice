@@ -31,5 +31,6 @@ extension UIColor {
 }
 
 extension Color {
-    static var primaryColor = Color(uiColor: .init(hexString: "#426A5A"))
+    static var primaryGreen = Color(uiColor: .init(hexString: "#426A5A"))
+    static var primaryRed = Color(uiColor: .init(hexString: "#CB4040"))
 }

@@ -27,7 +27,7 @@ struct ContentView: View {
                 .toolbarBackground(Color.white, for: .tabBar)
         }
         .frame(height: 850)
-        .accentColor(.primaryColor)
+        .accentColor(.primaryGreen)
     }
 }
 

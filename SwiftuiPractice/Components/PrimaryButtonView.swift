@@ -15,8 +15,8 @@ struct PrimaryButtonView: View {
         Button(action: action) {
             ZStack {
                 RoundedRectangle(cornerSize: CGSize(width: 5, height: 5))
-                    .stroke(Color.primaryColor, lineWidth: 1)
-                    .fill(Color.primaryColor)
+                    .stroke(Color.primaryGreen, lineWidth: 2)
+                    .fill(Color.primaryGreen)
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .frame(height: 45)
                     .foregroundColor(Color(uiColor: .init(hexString: "#426A5A")))
@@ -67,13 +67,13 @@ struct ClearButtonView: View {
                     .stroke(borderColor, lineWidth: 1)
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .frame(height: 45)
-                    .foregroundColor(backgroundColor)
                 
                 Text(title)
                     .font(font)
                     .cornerRadius(20)
                     .foregroundColor(titleColor)
             }
+            .background(backgroundColor)
         }
     }
 }
