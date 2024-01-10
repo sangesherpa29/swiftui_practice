@@ -84,7 +84,7 @@ struct ProfileView: View {
                 VStack {
                     ClearButtonView(title: "Delete account",
                                     titleColor: .primaryRed,
-                                    backgroundColor: .cyan,
+                                    backgroundColor: .clear,
                                     borderColor: .primaryRed) {}
                     
                     PrimaryButtonView(title: "Logout") {}

@@ -8,29 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var selectedTab: Tabs
+
     var body: some View {
-        TabView {
-            ChatTabView()
-                .tabItem {
-                    Image(systemName: "ellipsis.message")
-                    Text("Chat")
-                }
-                .toolbarBackground(.visible, for: .tabBar)
-                .toolbarBackground(Color.white, for: .tabBar)
+        VStack {
+            switch selectedTab {
+            case .Map:
+                MapView()
+            case .Chat:
+                ChatTabView()
+            case .Profile:
+                ProfileView()
+            }
             
-            ProfileView()
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("Profile")
-                }
-                .toolbarBackground(.visible, for: .tabBar)
-                .toolbarBackground(Color.white, for: .tabBar)
+            Spacer()
+            
+            VStack(spacing: 0) {
+                Rectangle()
+                    .frame(height: 0.2)
+                    .frame(maxWidth: .infinity)
+                    .foregroundColor(.black.opacity(0.35))
+                    .shadow(radius: 5, x: 1, y: -5)
+                
+                CustomTabbarView(selectedTab: $selectedTab)
+            }
         }
-        .frame(height: 850)
-        .accentColor(.primaryGreen)
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(selectedTab: .Chat)
 }

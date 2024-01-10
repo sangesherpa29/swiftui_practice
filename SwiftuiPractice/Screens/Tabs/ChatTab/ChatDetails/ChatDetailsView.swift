@@ -34,68 +34,7 @@ struct ChatDetailsView: View {
                     AnimatedProfileStatContainerView()
                     
                     // Current Minding Request
-                    ZStack {
-                        VStack {
-                            HStack {
-                                Text("Requested for")
-                                    .font(.custom("Poppins-Regular", size: 12))
-                                    .foregroundColor(.black.opacity(0.6))
-                                
-                                Spacer()
-                                
-                                NavigationLink(destination: FullProfileView()) {
-                                    HStack(spacing: 5) {
-                                        Text("All Requests")
-                                            .font(.custom("Poppins-Regular", size: 12))
-                                        
-                                        Image("smaller_arrow_icon_gray")
-                                            .resizable()
-                                            .frame(width: 8, height: 12)
-                                    }
-                                    .foregroundColor(.black)
-                                }
-                            }
-                            
-                            HStack {
-                                VStack(alignment: .leading, spacing: 5) {
-                                    Text("Date")
-                                        .font(.custom("Poppins-Regular", size: 12))
-                                        .foregroundColor(.black.opacity(0.6))
-                                    
-                                    Text("Jan 08, 2024")
-                                        .font(.custom("Poppins-SemiBold", size: 13))
-                                        .foregroundColor(.black)
-                                }
-                                .padding(.trailing, 65)
-                                .padding(.trailing, 65)
-                                
-                                VStack(alignment: .leading, spacing: 5) {
-                                    Text("Total hours")
-                                        .font(.custom("Poppins-Regular", size: 12))
-                                        .foregroundColor(.black.opacity(0.6))
-                                    
-                                    Text("10")
-                                        .font(.custom("Poppins-SemiBold", size: 13))
-                                        .foregroundColor(.black)
-                                }
-                                
-                                Spacer()
-                            }
-                            .padding(.vertical, 10)
-                            
-                            
-                            // Button Stack
-                            HStack {
-                                PrimaryButtonView(title: "Accept Request") {}
-                                ClearButtonView(title: "Cancel Request",
-                                                titleColor: .red,
-                                                borderColor: .red){}
-                            }
-                        }
-                    }
-                    .padding(20)
-                    .frame(maxWidth: .infinity)
-                    .background(Color(uiColor: .init(hexString: "#F0F6F4")))
+                    CurrentMindingRequestView()
                 }
                 
                 Spacer()
@@ -186,7 +125,75 @@ struct ChatTopbarView<V: View>: View {
     }
 }
 
+struct CurrentMindingRequestView: View {
+    @State var date = "Jan 08, 2024"
+    @State var hours = "10"
+    
+    var body: some View {
+        ZStack {
+            VStack {
+                HStack {
+                    Text("Requested for")
+                        .font(.custom("Poppins-Regular", size: 12))
+                        .foregroundColor(.black.opacity(0.6))
+                    
+                    Spacer()
+                    
+                    NavigationLink(destination: FullProfileView()) {
+                        HStack(spacing: 5) {
+                            Text("All Requests")
+                                .font(.custom("Poppins-Regular", size: 12))
+                            
+                            Image("smaller_arrow_icon_gray")
+                                .resizable()
+                                .frame(width: 8, height: 12)
+                        }
+                        .foregroundColor(.black)
+                    }
+                }
+                
+                HStack {
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Date")
+                            .font(.custom("Poppins-Regular", size: 12))
+                            .foregroundColor(.black.opacity(0.6))
+                        
+                        Text(date)
+                            .font(.custom("Poppins-SemiBold", size: 13))
+                            .foregroundColor(.black)
+                    }
+                    .padding(.trailing, 85)
+                    
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Total hours")
+                            .font(.custom("Poppins-Regular", size: 12))
+                            .foregroundColor(.black.opacity(0.6))
+                        
+                        Text(hours)
+                            .font(.custom("Poppins-SemiBold", size: 13))
+                            .foregroundColor(.black)
+                    }
+                    
+                    Spacer()
+                }
+                .padding(.vertical, 10)
+                
+                
+                // Button Stack
+                HStack {
+                    PrimaryButtonView(title: "Accept Request") {}
+                    ClearButtonView(title: "Cancel Request",
+                                    titleColor: .red,
+                                    borderColor: .red){}
+                }
+            }
+        }
+        .padding(20)
+        .frame(maxWidth: .infinity)
+        .background(Color(uiColor: .init(hexString: "#F0F6F4")))
+    }
+}
 
 #Preview {
-    ChatTopbarView(destinationView: FullProfileView())
+    CurrentMindingRequestView(date: "Jan 08, 2024", hours: "10")
 }

@@ -31,6 +31,7 @@ struct ChatTabView: View {
                     NavigationLink(destination: ChatDetailsView()) {
                         ChatTableCellView(name: person.name, image: person.image)
                             .cornerRadius(10)
+                            .presentationCompactAdaptation(.fullScreenCover)
                     }
                 }
                 .listStyle(PlainListStyle())
